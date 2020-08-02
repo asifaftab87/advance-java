@@ -1,0 +1,13 @@
+
+lsquid:S1118":Add a private constructor to hide the implicit public one.(‹¬ş–øÿÿÿÿH»RMAJORZ
+CODE_SMELL
+l
+squid:S106";Replace this usage of System.out or System.err by a logger.(Š«‚ÛşÿÿÿÿH¼RMAJORZ
+CODE_SMELL
+Xsquid:S1659"Declare "s" on a separate line.(Ûşëùÿÿÿÿ8½‘‡´.H¾RMINORZ
+CODE_SMELL
+_squid:S1481"&Remove this unused "n" local variable.(Ûşëùÿÿÿÿ8½‘‡´.H¿RMINORZ
+CODE_SMELL
+gsquid:S1854"5Remove this useless assignment to local variable "n".(Ûşëùÿÿÿÿ8½‘‡´.HÀRMAJORZBUG
+Qsquid:S1659"Declare "i" on a separate line.(ÛşëùÿÿÿÿHÁRMINORZ
+CODE_SMELL

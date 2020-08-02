@@ -1,0 +1,11 @@
+package kamil;
+
+public class DivDouble {
+
+	public static void main(String[] args) {
+		
+		double d = 5/2;
+		
+		System.out.println("val value: "+d);
+	}
+}

@@ -1,0 +1,11 @@
+package org.oop;
+
+public class Bottle {
+
+	private String material;
+	private String color;
+	private double volume;
+	private int price;
+	
+	
+}

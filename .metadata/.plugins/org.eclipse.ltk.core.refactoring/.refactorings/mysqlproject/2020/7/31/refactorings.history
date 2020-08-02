@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;Emp.java&apos; to &apos;first-web-project/src/org.first.model&apos;&#x0D;&#x0A;- Original project: &apos;mysqlproject&apos;&#x0D;&#x0A;- Destination element: &apos;first-web-project/src/org.first.model&apos;&#x0D;&#x0A;- Original element: &apos;org.mysql.conn.model.Emp.java&apos;" description="Copy compilation unit" destination="=first-web-project/src=/optional=/true=/=/maven.pomderived=/true=/&lt;org.first.model" element1="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;org.mysql.conn.model{Emp.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1595770707848" units="1" version="1.0"/>
+</session>

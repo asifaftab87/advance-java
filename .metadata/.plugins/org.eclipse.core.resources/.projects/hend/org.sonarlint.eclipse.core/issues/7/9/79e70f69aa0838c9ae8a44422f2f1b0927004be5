@@ -1,0 +1,29 @@
+
+q	java:S106·"9Replace this use of System.out or System.err by a logger.(¨¶ÑÍşÿÿÿÿ8²İ¢µ.H“RMAJORZ
+CODE_SMELL
+k
+java:S2259+"AA "NullPointerException" could be thrown; "con" is nullable here.(éÆ“šûÿÿÿÿH”RMAJORZBUG
+i	java:S106'"9Replace this use of System.out or System.err by a logger.(©şêÜúÿÿÿÿH•RMAJORZ
+CODE_SMELL
+q	java:S106‹"9Replace this use of System.out or System.err by a logger.(ºçıÿÿÿÿ8¿ß‚µ.H–RMAJORZ
+CODE_SMELL
+i	java:S106J"9Replace this use of System.out or System.err by a logger.(¨¶ÑÍşÿÿÿÿH—RMAJORZ
+CODE_SMELL
+p	java:S106h"9Replace this use of System.out or System.err by a logger.(¨¶ÑÍşÿÿÿÿ8âºĞŒµ.H˜RMAJORZ
+CODE_SMELL
+j	java:S106•"9Replace this use of System.out or System.err by a logger.(¨¶ÑÍşÿÿÿÿH™RMAJORZ
+CODE_SMELL
+i	java:S106d"9Replace this use of System.out or System.err by a logger.(Ï½ÊùÿÿÿÿHšRMAJORZ
+CODE_SMELL
+q	java:S106°"9Replace this use of System.out or System.err by a logger.(Œ¿´íşÿÿÿÿ8š¥ µ.H›RMAJORZ
+CODE_SMELL
+d	java:S106@"9Replace this use of System.out or System.err by a logger.(û¨¸¨HœRMAJORZ
+CODE_SMELL
+l	java:S106­"9Replace this use of System.out or System.err by a logger.(û£¢«8ï«Ÿµ.HRMAJORZ
+CODE_SMELL
+m	java:S125!"<This block of commented-out lines of code should be removed.(ä­ï8ÕˆŠµ.HRMAJORZ
+CODE_SMELL
+k	java:S106C"9Replace this use of System.out or System.err by a logger.(ƒı¸Í8§Íôµ.HŸRMAJORZ
+CODE_SMELL
+e	java:S106"9Replace this use of System.out or System.err by a logger.(Ê•Ê€H RMAJORZ
+CODE_SMELL

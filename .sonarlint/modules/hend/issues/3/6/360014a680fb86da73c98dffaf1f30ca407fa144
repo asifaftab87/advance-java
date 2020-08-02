@@ -1,0 +1,12 @@
+
+m
+squid:S106";Replace this usage of System.out or System.err by a logger.(©‘°Z8‰ßêÑ±.HÒRMAJORZ
+CODE_SMELL
+s
+squid:S106";Replace this usage of System.out or System.err by a logger.(Œµ¨³øÿÿÿÿ8«ÆÛÑ±.HÓRMAJORZ
+CODE_SMELL
+s
+squid:S106";Replace this usage of System.out or System.err by a logger.(íâ†Ïùÿÿÿÿ8‰ßêÑ±.HÐRMAJORZ
+CODE_SMELL
+ssquid:S1118":Add a private constructor to hide the implicit public one.(Âü ¹úÿÿÿÿ8«ÆÛÑ±.HÑRMAJORZ
+CODE_SMELL

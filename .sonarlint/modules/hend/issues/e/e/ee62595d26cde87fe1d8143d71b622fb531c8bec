@@ -1,0 +1,15 @@
+
+_squid:S1854"9Remove this useless assignment to local variable "split".(âÍ·ëHRMAJORZBUG
+Ssquid:S1481"&Remove this unused "t" local variable.(®şÊÅH‹RMINORZ
+CODE_SMELL
+Tsquid:S1481"'Remove this unused "sb" local variable.(í…Ò‰HŒRMINORZ
+CODE_SMELL
+Osquid:S2189""Add an end condition to this loop.(˜ïˆÿÿÿÿÿHRBLOCKERZBUG
+lsquid:S1118":Add a private constructor to hide the implicit public one.(ÚËáùÿÿÿÿHRMAJORZ
+CODE_SMELL
+[squid:S1854"5Remove this useless assignment to local variable "t".(®şÊÅH‘RMAJORZBUG
+\squid:S1854"6Remove this useless assignment to local variable "sb".(í…Ò‰H‰RMAJORZBUG
+Wsquid:S1481"*Remove this unused "split" local variable.(âÍ·ëHRMINORZ
+CODE_SMELL
+Œsquid:S1149"_Replace the synchronized class "StringBuffer" by an unsynchronized one such as "StringBuilder".(í…Ò‰HŠRMAJORZ
+CODE_SMELL

@@ -1,0 +1,17 @@
+
+s
+squid:S106";Replace this usage of System.out or System.err by a logger.(Æì° úÿÿÿÿ8üûÈË±.HüRMAJORZ
+CODE_SMELL
+xsquid:S3518"CMake sure this expression can't be zero before doing this division.(™áªúÿÿÿÿ8«®ËË±.H‚RCRITICALZBUG
+ssquid:S1118":Add a private constructor to hide the implicit public one.( ÊÎ¤ıÿÿÿÿ8üûÈË±.H„RMAJORZ
+CODE_SMELL
+s
+squid:S106";Replace this usage of System.out or System.err by a logger.(Œµ¨³øÿÿÿÿ8–şãË±.HRMAJORZ
+CODE_SMELL
+Rsquid:S1166"%Either log or rethrow this exception.(…¨ıÊ8–şãË±.H€RMAJORZBUG
+s
+squid:S106	";Replace this usage of System.out or System.err by a logger.(®ßüÿÿÿÿ8üûÈË±.HƒRMAJORZ
+CODE_SMELL
+s
+squid:S106";Replace this usage of System.out or System.err by a logger.(©şêÜúÿÿÿÿ8üûÈË±.HÿRMAJORZ
+CODE_SMELL

@@ -1,0 +1,14 @@
+package org.arr;
+
+public class ArrayTwo {
+
+	public static void main(String[] args) {
+		
+		int[] arr = new int[5];
+		
+		int v = 5;
+		
+		System.out.println("v: "+v);
+		System.out.println("arr: "+arr);
+	}
+}

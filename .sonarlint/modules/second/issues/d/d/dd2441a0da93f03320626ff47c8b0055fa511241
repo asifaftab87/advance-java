@@ -1,0 +1,18 @@
+
+bsquid:S1854"5Remove this useless assignment to local variable "d".(§±ðÈ8…Åš©±.H²
+RMAJORZBUG
+lsquid:S1118":Add a private constructor to hide the implicit public one.(÷²ãÖûÿÿÿÿH°
+RMAJORZ
+CODE_SMELL
+n
+squid:S106	";Replace this usage of System.out or System.err by a logger.(¢À¸¼8ÀÏò¨±.H®
+RMAJORZ
+CODE_SMELL
+csquid:S1854"6Remove this useless assignment to local variable "af".(¯¾Ýø8‰”™©±.H±
+RMAJORZBUG
+[squid:S1481"'Remove this unused "af" local variable.(¯¾Ýø8‰”™©±.H¯
+RMINORZ
+CODE_SMELL
+Zsquid:S1481"&Remove this unused "d" local variable.(§±ðÈ8…Åš©±.H­
+RMINORZ
+CODE_SMELL
