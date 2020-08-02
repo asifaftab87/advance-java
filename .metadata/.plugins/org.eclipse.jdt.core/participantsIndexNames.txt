@@ -1,5 +1,0 @@
-INDEX VERSION 1.131
-D:\WorkSpaces\StudentsWorkSpaces\liyanaworkspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3388911992.index
-\first-web-project\src
-D:\WorkSpaces\StudentsWorkSpaces\liyanaworkspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\302187871.index
-\first-web-project\src

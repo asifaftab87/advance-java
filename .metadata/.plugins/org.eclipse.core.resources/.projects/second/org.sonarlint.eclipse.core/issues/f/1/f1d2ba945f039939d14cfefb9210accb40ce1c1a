@@ -1,9 +1,0 @@
-
-i	java:S106"9Replace this use of System.out or System.err by a logger.(Š«‚ÛþÿÿÿÿH¯RMAJORZ
-CODE_SMELL
-P
-java:S1659"Declare "s" on a separate line.(üÌÕñøÿÿÿÿH®RMINORZ
-CODE_SMELL
-W
-java:S1659"Declare "i" on a separate line.(üÌÕñøÿÿÿÿ8”£³éµ.H»RMINORZ
-CODE_SMELL

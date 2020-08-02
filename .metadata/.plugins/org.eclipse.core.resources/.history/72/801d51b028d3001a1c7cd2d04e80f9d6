@@ -1,9 +1,0 @@
-package org.oop;
-
-public class BottleMain {
-
-	public static void main(String[] args) {
-		
-		Bottle bottle = new Bottle();
-	}
-}
