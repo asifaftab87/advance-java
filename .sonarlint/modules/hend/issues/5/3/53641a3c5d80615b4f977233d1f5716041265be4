@@ -1,9 +1,0 @@
-
-Dsquid:S2095"Close this "Scanner".(Ëì¥Ø8µ¯šÌ±.HúRBLOCKERZBUG
-ssquid:S1118	":Add a private constructor to hide the implicit public one.(ÈäŽ•ûÿÿÿÿ8úñ€Ì±.HõRMAJORZ
-CODE_SMELL
-_squid:S1148"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8ŸÚ™Ì±.HøRMINORZVULNERABILITY
-fsquid:S1481"-Remove this unused "myReader" local variable.(Žü’²ùÿÿÿÿ8µ¯šÌ±.HùRMINORZ
-CODE_SMELL
-Wsquid:S1166"%Either log or rethrow this exception.(Ÿ¬á´ÿÿÿÿÿ8ŸÚ™Ì±.HöRMAJORZBUG
-isquid:S1854"<Remove this useless assignment to local variable "myReader".(Ëì¥Ø8µ¯šÌ±.H÷RMAJORZBUG

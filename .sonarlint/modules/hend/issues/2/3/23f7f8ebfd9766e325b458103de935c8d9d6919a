@@ -1,31 +1,0 @@
-
-Zsquid:S1172"(Remove this unused method parameter "z".(Çø‰ÑşÿÿÿÿHæRMAJORZ
-CODE_SMELL
-Usquid:S1172"(Remove this unused method parameter "z".(¡É¼±HèRMAJORZ
-CODE_SMELL
-f
-squid:S106";Replace this usage of System.out or System.err by a logger.(¸ØïUHêRMAJORZ
-CODE_SMELL
-fsquid:S1118":Add a private constructor to hide the implicit public one.(ƒëüRHçRMAJORZ
-CODE_SMELL
-Usquid:S1172#"(Remove this unused method parameter "z".(ç„Â¥HìRMAJORZ
-CODE_SMELL
-l
-squid:S106";Replace this usage of System.out or System.err by a logger.(İè¬øÿÿÿÿHíRMAJORZ
-CODE_SMELL
-l
-squid:S106$";Replace this usage of System.out or System.err by a logger.(ÎÒ°¬øÿÿÿÿHåRMAJORZ
-CODE_SMELL
-Zsquid:S1172"(Remove this unused method parameter "z".(Ñ˜ÅïşÿÿÿÿHëRMAJORZ
-CODE_SMELL
-l
-squid:S106 ";Replace this usage of System.out or System.err by a logger.(´ğ«şÿÿÿÿHâRMAJORZ
-CODE_SMELL
-g
-squid:S106";Replace this usage of System.out or System.err by a logger.(ºÙ„½HãRMAJORZ
-CODE_SMELL
-Zsquid:S1172"(Remove this unused method parameter "z".(ûáı‰ÿÿÿÿÿHéRMAJORZ
-CODE_SMELL
-f
-squid:S106";Replace this usage of System.out or System.err by a logger.(×Ë DHäRMAJORZ
-CODE_SMELL

@@ -1,19 +1,0 @@
-
-n
-squid:S106";Replace this usage of System.out or System.err by a logger.(º—ï…8½ä«õ².HâRMAJORZ
-CODE_SMELL
-n
-squid:S106";Replace this usage of System.out or System.err by a logger.(º—ï…8öî¯õ².HãRMAJORZ
-CODE_SMELL
-n
-squid:S106";Replace this usage of System.out or System.err by a logger.(½¥ •8½ä«õ².HäRMAJORZ
-CODE_SMELL
-ssquid:S1118":Add a private constructor to hide the implicit public one.(ì«Ýýüÿÿÿÿ8½ä«õ².HåRMAJORZ
-CODE_SMELL
-Rsquid:S1659"Declare "b" on a separate line.(“†¬v8½ä«õ².HæRMINORZ
-CODE_SMELL
-Rsquid:S1659"Declare "c" on a separate line.(“†¬v8½ä«õ².HçRMINORZ
-CODE_SMELL
-s
-squid:S106";Replace this usage of System.out or System.err by a logger.(Œµ¨³øÿÿÿÿ8öî¯õ².HèRMAJORZ
-CODE_SMELL

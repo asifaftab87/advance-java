@@ -1,6 +1,0 @@
-
-nsquid:S1118":Add a private constructor to hide the implicit public one.(Èµè8ª¾õÿ¯.HÆRMAJORZ
-CODE_SMELL
-[squid:S1481"'Remove this unused "ct" local variable.(ÓÖÒó8éï†€°.HãRMINORZ
-CODE_SMELL
-csquid:S1854"6Remove this useless assignment to local variable "ct".(ÓÖÒó8éï†€°.HäRMAJORZBUG

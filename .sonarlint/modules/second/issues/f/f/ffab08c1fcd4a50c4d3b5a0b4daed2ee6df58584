@@ -1,23 +1,0 @@
-
-s
-squid:S106";Replace this usage of System.out or System.err by a logger.(şÊ—‰úÿÿÿÿ8„§İ³.HĞRMAJORZ
-CODE_SMELL
-n
-squid:S106";Replace this usage of System.out or System.err by a logger.(¢ïéç8çåŸİ³.HÑRMAJORZ
-CODE_SMELL
-n
-squid:S106";Replace this usage of System.out or System.err by a logger.(¢ïéç8„§İ³.HÒRMAJORZ
-CODE_SMELL
-nsquid:S1118":Add a private constructor to hide the implicit public one.(ÏÉ¯î8çåŸİ³.HÓRMAJORZ
-CODE_SMELL
-‚squid:S1192"FDefine a constant instead of duplicating this literal "oc2: " 3 times.(¨æóıÿÿÿÿÿ8‘ø¶İ³.HÔRCRITICALZ
-CODE_SMELL
-n
-squid:S106";Replace this usage of System.out or System.err by a logger.(ÁÀıı8‘ø¶İ³.HÕRMAJORZ
-CODE_SMELL
-s
-squid:S106";Replace this usage of System.out or System.err by a logger.(¨æóıÿÿÿÿÿ8œ½¤İ³.HÖRMAJORZ
-CODE_SMELL
-squid:S1192
-"JDefine a constant instead of duplicating this literal "Thumbs.db" 5 times.(³Ø¸¸8„§İ³.H×RCRITICALZ
-CODE_SMELL

@@ -1,15 +1,0 @@
-
-qsquid:S2583"DChange this condition so that it does not always evaluate to "false"(İÙàŞ8ï½„Ó±.HÀRMAJORZBUG
-vsquid:S2583
-"DChange this condition so that it does not always evaluate to "false"(¨·Ê‚ûÿÿÿÿ8ï½„Ó±.HÈRMAJORZBUG
-m
-squid:S106";Replace this usage of System.out or System.err by a logger.(©‘°Z8ÏÀ…Ó±.HËRMAJORZ
-CODE_SMELL
-s
-squid:S106";Replace this usage of System.out or System.err by a logger.(íâ†Ïùÿÿÿÿ8ÏÀ…Ó±.HÊRMAJORZ
-CODE_SMELL
-ssquid:S1118":Add a private constructor to hide the implicit public one.(‘ĞÃúÿÿÿÿ8ï½„Ó±.HÉRMAJORZ
-CODE_SMELL
-s
-squid:S106";Replace this usage of System.out or System.err by a logger.(•¤«üÿÿÿÿ8ñ¼ŒÓ±.HÅRMAJORZ
-CODE_SMELL

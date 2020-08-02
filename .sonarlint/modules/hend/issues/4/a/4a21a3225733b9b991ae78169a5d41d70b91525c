@@ -1,14 +1,0 @@
-
-n
-squid:S106";Replace this usage of System.out or System.err by a logger.(š¹şæ8‹°Î°­.H›RMAJORZ
-CODE_SMELL
-n
-squid:S106";Replace this usage of System.out or System.err by a logger.(§°Ğ8ƒ‚À°­.HœRMAJORZ
-CODE_SMELL
-nsquid:S1118":Add a private constructor to hide the implicit public one.(şÖ©ì8ƒ‚À°­.HRMAJORZ
-CODE_SMELL
-Wsquid:S1166"%Either log or rethrow this exception.(ñ“Š±üÿÿÿÿ8×®Ñ°­.HRMAJORZBUG
-lsquid:S3518"7Make sure 'n' can't be zero before doing this division.(šè¬‘øÿÿÿÿ8¿¬Á°­.HŸRCRITICALZBUG
-s
-squid:S106";Replace this usage of System.out or System.err by a logger.(Üºèúÿÿÿÿ8×®Ñ°­.H RMAJORZ
-CODE_SMELL

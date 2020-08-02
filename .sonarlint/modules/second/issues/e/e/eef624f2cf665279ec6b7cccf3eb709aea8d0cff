@@ -1,17 +1,0 @@
-
-Zsquid:S1481"&Remove this unused "a" local variable.(ÎÅê¹8ëŞîÈ³.H½RMINORZ
-CODE_SMELL
-s
-squid:S106";Replace this usage of System.out or System.err by a logger.(š—°øÿÿÿÿ8ßÅëÈ³.H¸RMAJORZ
-CODE_SMELL
-g
-squid:S106";Replace this usage of System.out or System.err by a logger.(§°ĞH¼RMAJORZ
-CODE_SMELL
-gsquid:S1118":Add a private constructor to hide the implicit public one.(–‡âH¹RMAJORZ
-CODE_SMELL
-Qsquid:S1659"Declare "z" on a separate line.(ç“§åûÿÿÿÿHºRMINORZ
-CODE_SMELL
-Qsquid:S1659"Declare "y" on a separate line.(ç“§åûÿÿÿÿH»RMINORZ
-CODE_SMELL
-vsquid:S3358	"DExtract this nested ternary operation into an independent statement.(éĞğœøÿÿÿÿH·RMAJORZ
-CODE_SMELL

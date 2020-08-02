@@ -1,23 +1,0 @@
-
-ˆsquid:S1488'"[Immediately return this expression instead of assigning it to the temporary variable "sum".(áƒ†øH­RMINORZ
-CODE_SMELL
-l
-squid:S106";Replace this usage of System.out or System.err by a logger.(œ•ªªıÿÿÿÿH²RMAJORZ
-CODE_SMELL
-squid:S1488"[Immediately return this expression instead of assigning it to the temporary variable "sum".(ğö½§ûÿÿÿÿH°RMINORZ
-CODE_SMELL
-lsquid:S1118":Add a private constructor to hide the implicit public one.(º–¶ŒûÿÿÿÿH¯RMAJORZ
-CODE_SMELL
-l
-squid:S106";Replace this usage of System.out or System.err by a logger.(±™ûºÿÿÿÿÿH³RMAJORZ
-CODE_SMELL
-ˆsquid:S1488"[Immediately return this expression instead of assigning it to the temporary variable "sum".(Îëü‚H±RMINORZ
-CODE_SMELL
-l
-squid:S106";Replace this usage of System.out or System.err by a logger.(ƒùÅÕÿÿÿÿÿH®RMAJORZ
-CODE_SMELL
-squid:S1488!"[Immediately return this expression instead of assigning it to the temporary variable "sum".(‡ÈÁ°şÿÿÿÿH«RMINORZ
-CODE_SMELL
-g
-squid:S106";Replace this usage of System.out or System.err by a logger.(½š›˜H¬RMAJORZ
-CODE_SMELL

@@ -1,9 +1,0 @@
-
-s
-squid:S106
-";Replace this usage of System.out or System.err by a logger.(Ξ­Άόÿÿÿÿ8γοβ΄®.HΖRMAJORZ
-CODE_SMELL
-n
-squid:S106	";Replace this usage of System.out or System.err by a logger.(χΎ‰8γοβ΄®.HΕRMAJORZ
-CODE_SMELL
-gsquid:S1444"0Make this "public static schoolName" field final(υκ8γοβ΄®.HΔRMINORZVULNERABILITY
