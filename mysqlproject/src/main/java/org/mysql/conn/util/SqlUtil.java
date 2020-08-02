@@ -12,6 +12,7 @@ import java.util.List;
 import org.mysql.conn.model.Address;
 import org.mysql.conn.model.Emp;
 
+//this is sql util class which we will use in other class to do sql operation
 public class SqlUtil {
 
 	private static Connection con = null;
