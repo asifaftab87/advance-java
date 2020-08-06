@@ -10,6 +10,6 @@
 	
 	<body>
 		<h1>Welcome to Users Page</h1>
-		<h2><a href="user">Please Click Here</a></h2>
+		<h2><a href="user/list">User</a></h2>
 	</body>
 </html>

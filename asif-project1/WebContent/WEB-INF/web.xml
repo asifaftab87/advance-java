@@ -15,7 +15,38 @@
 
 	<servlet-mapping>
 		<servlet-name>userServlet</servlet-name>
-		<url-pattern>/user</url-pattern>
+		<url-pattern>/user/list</url-pattern>
 	</servlet-mapping>
 
+	<servlet>
+		<servlet-name>deleteServlet</servlet-name>
+		<servlet-class>org.ecom.controller.UserDeleteController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>deleteServlet</servlet-name>
+		<url-pattern>/user/delete</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>createServlet</servlet-name>
+		<servlet-class>org.ecom.controller.UserCreateController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>createServlet</servlet-name>
+		<url-pattern>/user/add</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>updateServlet</servlet-name>
+		<servlet-class>org.ecom.controller.UserUpdateController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>updateServlet</servlet-name>
+		<url-pattern>/user/update</url-pattern>
+	</servlet-mapping>
+	
+	
 </web-app>

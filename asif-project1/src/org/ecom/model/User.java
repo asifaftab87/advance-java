@@ -60,4 +60,9 @@ public class User implements Serializable{
 		this.gender = gender;
 	}
 	
+	@Override
+	public String toString() {
+		return "id: "+id+"   firstName: "+firstName+"   lastName: "+lastName+"   dob: "+dob
+				+"   email: "+email+"   fatherName: "+fatherName+"   gender: "+gender;
+	}
 }

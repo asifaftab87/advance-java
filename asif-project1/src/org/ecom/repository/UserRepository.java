@@ -23,7 +23,7 @@ public class UserRepository {
 		
 		try {
 			stmt = con.createStatement();
-			rs = stmt.executeQuery("select * from emp");
+			rs = stmt.executeQuery("select * from user");
 			
 			if(rs!=null) {
 				
@@ -36,6 +36,7 @@ public class UserRepository {
 					user.setDob(rs.getDate(4));
 					user.setEmail(rs.getString(5));
 					user.setFatherName(rs.getString(6));
+					user.setGender(rs.getBoolean(7));
 					userList.add(user);
 				}
 				
@@ -65,7 +66,7 @@ public class UserRepository {
 		return userList;
 	}
 	
-	public static User findUserById(Connection con, int userId) {
+	public static User findUserById(Connection con, long userId) {
 
 		System.out.println("-----------findUserById userid: "+userId);
 
@@ -76,7 +77,7 @@ public class UserRepository {
 		try {
 			String query = "select * from user where id=?";
 			pStatement = con.prepareStatement(query);
-			pStatement.setInt(1, userId);
+			pStatement.setLong(1, userId);
 			rs = pStatement.executeQuery();
 			
 			if(rs!=null) {
@@ -90,6 +91,7 @@ public class UserRepository {
 					user.setDob(rs.getDate(4));
 					user.setEmail(rs.getString(5));
 					user.setFatherName(rs.getString(6));
+					user.setGender(rs.getBoolean(7));
 				}
 			}
 		} 
@@ -128,7 +130,7 @@ public class UserRepository {
 			//conversion from java.util.Date to java.sql.Date
 			java.sql.Date sqlDate = new java.sql.Date(user.getDob().getTime());
 			
-			String query = 	  "INSERT INTO emp(firstName, lastName, dob, email, fatherName, gender) "
+			String query = 	  "INSERT INTO user(firstName, lastName, dob, email, fatherName, gender) "
 							+ " VALUES (?, ?, ?, ?, ?, ?)";
 			pStatement = con.prepareStatement(query);
 			pStatement.setString(1, user.getFirstName());
@@ -163,8 +165,56 @@ public class UserRepository {
 			}
 		}
 	}
+	
+	public static void updateUser(Connection con, User user) {
+		
+		System.out.println("-----------updateUser------------");
+		
+		PreparedStatement pStatement = null;
+		
+		try{  
+			
+			//conversion from java.util.Date to java.sql.Date
+			java.sql.Date sqlDate = new java.sql.Date(user.getDob().getTime());
+			
+			String query = 	  " update user set firstName=?, lastName=?, dob=?, email=?, fatherName=?, gender=? "
+							+ " where id=? ";
+			pStatement = con.prepareStatement(query);
+			pStatement.setString(1, user.getFirstName());
+			pStatement.setString(2, user.getLastName());
+			pStatement.setDate(3, sqlDate);
+			pStatement.setString(4, user.getEmail());
+			pStatement.setString(5, user.getFatherName());
+			pStatement.setBoolean(6, user.getGender());
+			pStatement.setInt(7, user.getId());
+			
+			int executeUpdate = pStatement.executeUpdate();
+			
+			if(executeUpdate>0) {
+				System.out.println("data updated successfully: "+executeUpdate);
+			}
+			else {
+				System.out.println("failed to update data: "+executeUpdate);
+			}
+		}
+		catch(SQLException se){
+		      se.printStackTrace();
+		}
+		catch(Exception e){ 
+			System.out.println(e);
+		} 
+		finally {
+			try {
+				if(pStatement!=null) {
+					pStatement.close();
+				}
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+	}
 
-	public static int deleteUserById(Connection con, int userId) {
+	public static int deleteUserById(Connection con, long userId) {
 
 		System.out.println("-----------deleteUserById userid: "+userId);
 		
@@ -174,7 +224,7 @@ public class UserRepository {
 		try {
 			String query = "delete from user where id=?";
 			pStatement = con.prepareStatement(query);
-			pStatement.setInt(1, userId);
+			pStatement.setLong(1, userId);
 			executeUpdate = pStatement.executeUpdate();
 			
 			if(executeUpdate>0) {

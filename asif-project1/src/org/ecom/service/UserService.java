@@ -16,6 +16,10 @@ public class UserService {
 		con = GetSqlConnection.connectionOpen();
 	}
 	
+	public void connectionClose() {
+		GetSqlConnection.connectionClose();
+	}
+	
 	public List<User> getAllUser(){
 		
 		List<User> userList = new ArrayList<>();
@@ -27,7 +31,7 @@ public class UserService {
 		return userList;
 	}
 	
-	public User findUserById(int id){
+	public User findUserById(long id){
 		
 		User user = null;
 		
@@ -38,12 +42,16 @@ public class UserService {
 		return user;
 	}
 	
-	public int deleteUserById(Connection con, int userId) {
+	public int deleteUserById(long userId) {
 		return UserRepository.deleteUserById(con, userId);
 	}
 	
-	public void createUser(Connection con, User user) {
+	public void createUser(User user) {
 		UserRepository.createUser(con, user);
 	}
 	
+	
+	public void updateUser(User user) {
+		UserRepository.updateUser(con, user);
+	}
 }
