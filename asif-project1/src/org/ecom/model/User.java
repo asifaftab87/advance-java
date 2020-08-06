@@ -10,28 +10,29 @@ public class User implements Serializable{
 	public User() {}
 	
 	private int id;
-	private int firstName;
-	private int lastName;
+	private String firstName;
+	private String lastName;
 	private Date dob;
 	private String email;
 	private String fatherName;
-
+	private boolean gender;
+	
 	public int getId() {
 		return id;
 	}
 	public void setId(int id) {
 		this.id = id;
 	}
-	public int getFirstName() {
+	public String getFirstName() {
 		return firstName;
 	}
-	public void setFirstName(int firstName) {
+	public void setFirstName(String firstName) {
 		this.firstName = firstName;
 	}
-	public int getLastName() {
+	public String getLastName() {
 		return lastName;
 	}
-	public void setLastName(int lastName) {
+	public void setLastName(String lastName) {
 		this.lastName = lastName;
 	}
 	public Date getDob() {
@@ -51,6 +52,12 @@ public class User implements Serializable{
 	}
 	public void setFatherName(String fatherName) {
 		this.fatherName = fatherName;
+	}
+	public boolean getGender() {
+		return gender;
+	}
+	public void setGender(boolean gender) {
+		this.gender = gender;
 	}
 	
 }

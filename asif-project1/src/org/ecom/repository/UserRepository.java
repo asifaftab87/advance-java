@@ -1,6 +1,7 @@
 package org.ecom.repository;
 
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -11,14 +12,10 @@ import org.ecom.model.User;
 
 public class UserRepository {
 
-	public static ResultSet getAllUser(Connection con) {
+	public static List<User> getAllUser(Connection con) {
 
-		System.out.println("reading user");
+		System.out.println("-----------getAllUser------------");
 		
-		if (con == null) {
-			return null;
-		}
-
 		Statement stmt = null;
 		ResultSet rs = null;
 
@@ -31,15 +28,15 @@ public class UserRepository {
 			if(rs!=null) {
 				
 				while(rs.next())  {
-					//System.out.println(rs.getInt(1)+"  "+rs.getString(2)+"  "+rs.getInt(3));  
+					  
 					User user = new User();
-					int empId = rs.getInt(1);
-					
-					/*emp.setId(empId);
-					emp.setName(rs.getString(2));
-					emp.setAge(rs.getInt(3));
-					empList.add(emp);
-					*/
+					user.setId(rs.getInt(1));
+					user.setFirstName(rs.getString(2));
+					user.setLastName(rs.getString(3));
+					user.setDob(rs.getDate(4));
+					user.setEmail(rs.getString(5));
+					user.setFatherName(rs.getString(6));
+					userList.add(user);
 				}
 				
 			}
@@ -65,6 +62,144 @@ public class UserRepository {
 				e.printStackTrace();
 			}  
 		}
-		return null;
+		return userList;
 	}
+	
+	public static User findUserById(Connection con, int userId) {
+
+		System.out.println("-----------findUserById userid: "+userId);
+
+		ResultSet rs = null;
+		User user = null;
+		PreparedStatement pStatement = null;
+		
+		try {
+			String query = "select * from user where id=?";
+			pStatement = con.prepareStatement(query);
+			pStatement.setInt(1, userId);
+			rs = pStatement.executeQuery();
+			
+			if(rs!=null) {
+				
+				while(rs.next())  {
+					  
+					user = new User();
+					user.setId(rs.getInt(1));
+					user.setFirstName(rs.getString(2));
+					user.setLastName(rs.getString(3));
+					user.setDob(rs.getDate(4));
+					user.setEmail(rs.getString(5));
+					user.setFatherName(rs.getString(6));
+				}
+			}
+		} 
+		catch (Exception e) {
+			e.printStackTrace();
+		} 
+		finally {
+			try {
+				if(pStatement!=null) {
+					pStatement.close();
+				}
+			} 
+			catch (SQLException e) {
+				e.printStackTrace();
+			}  
+			try {
+				if(rs!=null) {
+					rs.close();
+				}
+			} 
+			catch (SQLException e) {
+				e.printStackTrace();
+			}  
+		}
+		return user;
+	}
+	
+	public static void createUser(Connection con, User user) {
+		
+		System.out.println("-----------createUser------------");
+		
+		PreparedStatement pStatement = null;
+		
+		try{  
+			
+			//conversion from java.util.Date to java.sql.Date
+			java.sql.Date sqlDate = new java.sql.Date(user.getDob().getTime());
+			
+			String query = 	  "INSERT INTO emp(firstName, lastName, dob, email, fatherName, gender) "
+							+ " VALUES (?, ?, ?, ?, ?, ?)";
+			pStatement = con.prepareStatement(query);
+			pStatement.setString(1, user.getFirstName());
+			pStatement.setString(2, user.getLastName());
+			pStatement.setDate(3, sqlDate);
+			pStatement.setString(4, user.getEmail());
+			pStatement.setString(5, user.getFatherName());
+			pStatement.setBoolean(6, user.getGender());
+			
+			int executeUpdate = pStatement.executeUpdate();
+			
+			if(executeUpdate>0) {
+				System.out.println("data created successfully: "+executeUpdate);
+			}
+			else {
+				System.out.println("failed to insert data: "+executeUpdate);
+			}
+		}
+		catch(SQLException se){
+		      se.printStackTrace();
+		}
+		catch(Exception e){ 
+			System.out.println(e);
+		} 
+		finally {
+			try {
+				if(pStatement!=null) {
+					pStatement.close();
+				}
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+	}
+
+	public static int deleteUserById(Connection con, int userId) {
+
+		System.out.println("-----------deleteUserById userid: "+userId);
+		
+		int executeUpdate = 0;
+		PreparedStatement pStatement = null;
+		
+		try {
+			String query = "delete from user where id=?";
+			pStatement = con.prepareStatement(query);
+			pStatement.setInt(1, userId);
+			executeUpdate = pStatement.executeUpdate();
+			
+			if(executeUpdate>0) {
+				System.out.println("data deleted successfully: "+executeUpdate);
+			}
+			else {
+				System.out.println("failed to delete data: "+executeUpdate);
+			}
+		} 
+		catch (Exception e) {
+			e.printStackTrace();
+		} 
+		finally {
+			try {
+				if(pStatement!=null) {
+					pStatement.close();
+				}
+			} 
+			catch (SQLException e) {
+				e.printStackTrace();
+			}  
+		}
+		
+		return executeUpdate;
+	}
+	
+	
 }
