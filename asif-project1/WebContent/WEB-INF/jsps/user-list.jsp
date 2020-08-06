@@ -6,7 +6,7 @@
 <html>
 	<head>
 		<meta charset="ISO-8859-1">
-		<title>Insert title here</title>
+		<title>User List</title>
 		<style>
 			table {
 			  font-family: arial, sans-serif;
@@ -41,10 +41,7 @@
 		<table>
 			<tr>
 				<th>First Name</th>
-				<th>Last Name</th>
-				<th>Date Of Birth</th>
 				<th>Email</th>
-				<th>Father Name</th>
 				<th>Gender</th>
 				<th>Action</th>
 			</tr>
@@ -53,11 +50,12 @@
 				for(User user : userList){
 				%>
 					<tr>
-						<td><%= user.getFirstName() %></td>
-						<td><%= user.getLastName() %></td>
-						<td><%= user.getDob() %></td>
+						<td>
+							<a href="/asif-project1/user/detail?userId=<%= user.getId() %>">
+								<%= user.getFirstName() %>
+							</a>
+						</td>
 						<td><%= user.getEmail() %></td>
-						<td><%= user.getFatherName() %></td>
 						<td><%= user.getGender() ? "male" : "female" %></td>
 						<td>
 							<a href="/asif-project1/user/delete?userId=<%= user.getId() %>">Delete</a>
