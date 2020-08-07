@@ -3,12 +3,11 @@ package org.ecom.model;
 import java.io.Serializable;
 import java.util.Date;
 
+//model class
 public class User implements Serializable{
 
 	private static final long serialVersionUID = -1582067386243719716L;
 
-	public User() {}
-	
 	private int id;
 	private String firstName;
 	private String lastName;
@@ -16,6 +15,8 @@ public class User implements Serializable{
 	private String email;
 	private String fatherName;
 	private boolean gender;
+	
+	public User() {}
 	
 	public int getId() {
 		return id;

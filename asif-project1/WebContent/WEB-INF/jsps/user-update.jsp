@@ -32,6 +32,7 @@
 		<h1>Update User</h1>
 		
 		<form action="/asif-project1/user/update" method="post">
+		
 		  <input type="hidden" id="userId" name="userId" value="<%= user.getId() %>" />
 		  
 		  <label for="fname">First name:</label><br>
