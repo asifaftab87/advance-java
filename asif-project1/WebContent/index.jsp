@@ -7,7 +7,8 @@
 		<meta charset="ISO-8859-1">
 		<title>Insert title here</title>
 	</head>
-	
+	 // hend 
+	 
 	<body>
 		<h1>Welcome to Users Page</h1>
 		<h2><a href="user/list">User</a></h2>
