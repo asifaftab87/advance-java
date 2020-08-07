@@ -48,5 +48,15 @@
 		<url-pattern>/user/update</url-pattern>
 	</servlet-mapping>
 	
+	<servlet>
+		<servlet-name>detailServlet</servlet-name>
+		<servlet-class>org.ecom.controller.UserDetailController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>detailServlet</servlet-name>
+		<url-pattern>/user/detail</url-pattern>
+	</servlet-mapping>
+	
 	
 </web-app>
