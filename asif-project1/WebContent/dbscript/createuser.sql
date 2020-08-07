@@ -1,6 +1,8 @@
 
 create database db1;
 
+use db1;
+
 create table user(
 	id int(5) auto_increment primary key,
 	firstName varchar(50) not null,
