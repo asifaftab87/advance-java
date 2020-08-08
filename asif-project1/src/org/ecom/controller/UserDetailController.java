@@ -33,7 +33,10 @@ public class UserDetailController extends HttpServlet {
 			User user = userService.findUserById(userId);
 			
 			if(user!=null) {
+				
+				//pass value to jsp 
 				request.setAttribute("user", user);
+				
 				AddressService addressService = new AddressService();
 				List<Address> addressList = addressService.findAddressByUserId(userId);
 				request.setAttribute("addressList", addressList);

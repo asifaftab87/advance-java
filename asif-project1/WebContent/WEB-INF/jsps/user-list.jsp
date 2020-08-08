@@ -38,6 +38,7 @@
 				<input type="submit" value="Add User" style="float: right;" />
 			</form>
 		</div>
+		
 		<table>
 			<tr>
 				<th>First Name</th>

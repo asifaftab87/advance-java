@@ -42,7 +42,7 @@ public class UserCreateController extends HttpServlet {
 		System.out.println("firstName: "+firstName);
 		System.out.println("lName: "+lName);
 		System.out.println("email: "+email);
-		System.out.println("dob: "+dobString);
+		System.out.println("dob string: "+dobString);
 		System.out.println("gender: "+genderString);
 		
 		boolean gender = false;

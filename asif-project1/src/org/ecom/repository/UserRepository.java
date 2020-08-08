@@ -10,7 +10,7 @@ import java.util.List;
 
 import org.ecom.model.User;
 
-public class UserRepository {
+public class UserRepository {	//DAO Data Access Object
 
 	public static List<User> getAllUser(Connection con) {
 
@@ -75,7 +75,7 @@ public class UserRepository {
 		PreparedStatement pStatement = null;
 		
 		try {
-			String query = "select * from user where id=?";
+			String query = " select * from user where id=? ";
 			pStatement = con.prepareStatement(query);
 			pStatement.setLong(1, userId);
 			rs = pStatement.executeQuery();
