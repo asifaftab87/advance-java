@@ -109,7 +109,7 @@ public class MoneyDetailRepository {
 		return MoneyDetailList;
 	}
 
-	// create method MoneyDetail
+	// Create method MoneyDetail
 	public static void createMoneyDetail(Connection con, MoneyDetail moneydet) {
 
 		System.out.println("-----------createMoneyDetail------------");
@@ -149,7 +149,7 @@ public class MoneyDetailRepository {
 			}
 		}
 	}
- //update MoneyDetail
+ //Update MoneyDetail
 	public static void updateMoneyDetail(Connection con, MoneyDetail moneydet) {
 
 		System.out.println("-----------updateMoneyDetail------------");
@@ -192,7 +192,7 @@ public class MoneyDetailRepository {
 		}
 	}
 	
-	//delete MoneyDetail
+	//Delete MoneyDetail
 	public static void deleteMoneyDetail(Connection con, MoneyDetail moneydet) {
 
 		System.out.println("-----------deleteMoneyDetailByID MoneyDetailid: "+moneydet);
