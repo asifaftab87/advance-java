@@ -24,6 +24,14 @@ create table address(
 	pincode varchar(50)
 );
 
+create table MoneyDetail(
+	id int(5) auto_increment primary key,
+	userid int(5) not null,
+	balance double (10),
+	createdate DATE,
+	updatedate DATE,
+
+);
 
 INSERT INTO db1.address (userid, street, city, state, country, pincode) VALUES (13, 'loha pool', 'kolkata', 'wb', 'india', '700019');
 
