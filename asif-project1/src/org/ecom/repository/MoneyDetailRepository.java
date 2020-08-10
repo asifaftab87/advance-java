@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.ecom.model.MoneyDetail;
+import org.ecom.model.User;
 
 
 public class MoneyDetailRepository {
@@ -107,6 +108,58 @@ public class MoneyDetailRepository {
 			}
 		}
 		return MoneyDetailList;
+	}
+	
+	//find MoneyDetail ById
+	public static MoneyDetail findMoneyDetailById(Connection con, long Id) {
+
+		System.out.println("-----------findMoneyDetailById id: "+Id);
+
+		ResultSet rs = null;
+		MoneyDetail moneydet = null;
+		PreparedStatement pStatement = null;
+		
+		try {
+			String query = " select * from MoneyDetail where id=? ";
+			pStatement = con.prepareStatement(query);
+			pStatement.setLong(1, Id);
+			rs = pStatement.executeQuery();
+			
+			if(rs!=null) {
+				
+				while (rs.next()) {
+				    moneydet = new MoneyDetail();
+					moneydet.setId(rs.getInt(1));
+					moneydet.setUserid(rs.getInt(2));
+					moneydet.setBalance(rs.getDouble(3));
+					moneydet.setCreatedate(rs.getDate(4));
+					moneydet.setUpdatedate(rs.getDate(5));
+				
+				}
+			}
+		} 
+		catch (Exception e) {
+			e.printStackTrace();
+		} 
+		finally {
+			try {
+				if(pStatement!=null) {
+					pStatement.close();
+				}
+			} 
+			catch (SQLException e) {
+				e.printStackTrace();
+			}  
+			try {
+				if(rs!=null) {
+					rs.close();
+				}
+			} 
+			catch (SQLException e) {
+				e.printStackTrace();
+			}  
+		}
+		return moneydet;
 	}
 
 	// Create method MoneyDetail

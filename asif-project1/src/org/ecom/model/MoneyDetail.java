@@ -46,5 +46,9 @@ public class MoneyDetail implements Serializable{
 		this.updatedate = updatedate;
 	}
 	
-
+	@Override
+	public String toString() {
+		return "id: "+id+"   userid : "+userid +"   balance : "+balance +"   createdate : "+createdate
+				+"   updatedate : "+updatedate;
+	}
 }

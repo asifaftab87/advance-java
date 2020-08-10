@@ -5,51 +5,64 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.ecom.model.MoneyDetail;
+import org.ecom.model.User;
 import org.ecom.repository.MoneyDetailRepository;
+import org.ecom.repository.UserRepository;
 import org.ecom.util.GetSqlConnection;
 
 public class MoneyDetailService {
 
 	private Connection con = null;
-	
+
 	public MoneyDetailService() {
 		con = GetSqlConnection.connectionOpen();
 	}
-	
+
 	public void connectionClose() {
 		GetSqlConnection.connectionClose();
 	}
-	
-	public List<MoneyDetail> getAllMoneyDetail(){
-		
+
+	public List<MoneyDetail> getAllMoneyDetail() {
+
 		List<MoneyDetail> MoneyDetailList = new ArrayList<>();
-		
-		if(con!=null) {
-			MoneyDetailList =MoneyDetailRepository.getAllMoneyDetail(con);
+
+		if (con != null) {
+			MoneyDetailList = MoneyDetailRepository.getAllMoneyDetail(con);
 		}
-		
+
+		return MoneyDetailList;
+	}
+
+	public List<MoneyDetail> findMoneyDetailByUserId(long userId) {
+
+		List<MoneyDetail> MoneyDetailList = new ArrayList<>();
+
+		if (con != null) {
+			MoneyDetailList = MoneyDetailRepository.findMoneyDetailByUserId(con, userId);
+		}
+
 		return MoneyDetailList;
 	}
 	
-	public List<MoneyDetail> findMoneyDetailByUserId(long userId){
+	public MoneyDetail findMoneyDetailById(long id){
 		
-		List<MoneyDetail> MoneyDetailList = new ArrayList<>();
+		MoneyDetail moneydet = null;
 		
 		if(con!=null) {
-			MoneyDetailList =MoneyDetailRepository.findMoneyDetailByUserId(con, userId);
+			moneydet = MoneyDetailRepository.findMoneyDetailById(con, id);
 		}
 		
-		return MoneyDetailList;
+		return moneydet;
 	}
+
 	public int deleteMoneyDetail(long id) {
 		return MoneyDetailRepository.deleteMoneyDetail(con, id);
 	}
-	
+
 	public void createMoneyDetail(MoneyDetail moneydet) {
 		MoneyDetailRepository.createMoneyDetail(con, moneydet);
 	}
-	
-	
+
 	public void updateMoneyDetail(MoneyDetail moneydet) {
 		MoneyDetailRepository.updateMoneyDetail(con, moneydet);
 	}
