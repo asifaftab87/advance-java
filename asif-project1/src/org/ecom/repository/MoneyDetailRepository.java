@@ -122,11 +122,12 @@ public class MoneyDetailRepository {
 			java.sql.Date sqlCreatDate = new java.sql.Date(moneydet.getCreatedate().getTime());
 			java.sql.Date sqlUpdatDate = new java.sql.Date(moneydet.getUpdatedate().getTime());
 
-			String query = "INSERT INTO MoneyDetail(balance, createdate , updatedate ) " + " VALUES (?, ?, ?)";
+			String query = "INSERT INTO MoneyDetail(userid, balance, createdate , updatedate ) " + " VALUES (?,?, ?, ?)";
 			pStatement = con.prepareStatement(query);
 			pStatement.setDouble(1, moneydet.getBalance());
-			pStatement.setDate(2, sqlCreatDate);
-			pStatement.setDate(3, sqlUpdatDate);
+			pStatement.setDouble(2, moneydet.getUserid());
+			pStatement.setDate(3, sqlCreatDate);
+			pStatement.setDate(4, sqlUpdatDate);
 
 			int executeUpdate = pStatement.executeUpdate();
 
@@ -162,13 +163,14 @@ public class MoneyDetailRepository {
 			java.sql.Date sqlCreatDate = new java.sql.Date(moneydet.getCreatedate().getTime());
 			java.sql.Date sqlUpdatDate = new java.sql.Date(moneydet.getUpdatedate().getTime());
 
-			String query = 	  " update MoneyDetail set balance=?, createdate=?, updatedate=?"
+			String query = 	  " update MoneyDetail set userid=?, balance=?, createdate=?, updatedate=?"
 					+ " where id=? ";
 			
 			pStatement = con.prepareStatement(query);
 			pStatement.setDouble(1, moneydet.getBalance());
-			pStatement.setDate(2, sqlCreatDate);
-			pStatement.setDate(3, sqlUpdatDate);
+			pStatement.setDouble(2, moneydet.getUserid());
+			pStatement.setDate(3, sqlCreatDate);
+			pStatement.setDate(4, sqlUpdatDate);
 
 			int executeUpdate = pStatement.executeUpdate();
 
@@ -209,8 +211,9 @@ public class MoneyDetailRepository {
 			
 			pStatement = con.prepareStatement(query);
 			pStatement.setDouble(1, moneydet.getBalance());
-			pStatement.setDate(2, sqlCreatDate);
-			pStatement.setDate(3, sqlUpdatDate);
+			pStatement.setDouble(2, moneydet.getUserid());
+			pStatement.setDate(3, sqlCreatDate);
+			pStatement.setDate(4, sqlUpdatDate);
 
 			int executeUpdate = pStatement.executeUpdate();
 
