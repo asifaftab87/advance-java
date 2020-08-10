@@ -5,7 +5,7 @@
 <html>
 	<head>
 		<meta charset="ISO-8859-1">
-		<title>Create User</title>
+		<title>Create Money Detail </title>
 		<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 	    <link rel="stylesheet" href="/resources/demos/style.css">
 	    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
@@ -23,10 +23,10 @@
 		</div>
 		
 		<div>
-			<h2><a href="/asif-project1/MoneyDetail/list">MoneyDetail</a></h2>
+			<h2><a href="/asif-project1/MoneyDetail/list">Money Detail</a></h2>
 		</div>
 		
-		<h1>Add MoneyDetail</h1>
+		<h1>Add Money Detail</h1>
 		<form action="/asif-project1/MoneyDetail/add" method="post">
 		  <label for="id">User Id :</label><br>
 		  <input type="text" id="id" name="id"><br>
