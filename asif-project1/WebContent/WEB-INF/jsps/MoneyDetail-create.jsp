@@ -14,6 +14,10 @@
 			  $(function() {
 			    $("#datepicker").datepicker();
 			  });
+			  
+			  $(function() {
+				    $("#updatepicker").datepicker();
+				  });
   	    </script>
 	</head>
 	
@@ -38,7 +42,7 @@
 		  <input type="text" id="datepicker" name="Cdate"><br>
 		  
 		  <label for="Udate">Update date :</label><br>
-		  <input type="text" id="datepicker" name="Udate"><br>
+		  <input type="text" id="updatepicker" name="Udate"><br>
 		  
 
 		  

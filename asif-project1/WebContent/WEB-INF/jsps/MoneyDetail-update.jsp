@@ -15,6 +15,10 @@
 			  $(function() {
 			    $("#datepicker").datepicker();
 			  });
+			  
+			  $(function() {
+				    $("#updatepicker").datepicker();
+				  });
   	    </script>		
 	</head>
 	<body>
@@ -46,7 +50,7 @@
 		  <input type="text" id="datepicker" name="Cdate" value="<%= moneydet.getCreatedate() %>" /><br><br>
 		  
 		  <label for="Udate">Update Date:</label><br>
-		  <input type="text" id="datepicker" name="Udate" value="<%= moneydet.getUpdatedate() %>" /><br><br>
+		  <input type="text" id="updatepicker" name="Udate" value="<%= moneydet.getUpdatedate() %>" /><br><br>
 		  
 		  
 		  <input type="submit" value="Submit">

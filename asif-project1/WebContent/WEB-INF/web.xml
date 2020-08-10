@@ -86,7 +86,7 @@
 
 	<servlet-mapping>
 		<servlet-name>createmoneyServlet</servlet-name>
-		<url-pattern>/MoneyDetail/create</url-pattern>
+		<url-pattern>/MoneyDetail/add</url-pattern>
 	</servlet-mapping>
 
 	<servlet>
