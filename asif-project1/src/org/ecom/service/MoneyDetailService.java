@@ -41,5 +41,16 @@ public class MoneyDetailService {
 		
 		return MoneyDetailList;
 	}
+	public int deleteMoneyDetail(long id) {
+		return MoneyDetailRepository.deleteMoneyDetail(con, id);
+	}
 	
+	public void createMoneyDetail(MoneyDetail moneydet) {
+		MoneyDetailRepository.createMoneyDetail(con, moneydet);
+	}
+	
+	
+	public void updateMoneyDetail(MoneyDetail moneydet) {
+		MoneyDetailRepository.updateMoneyDetail(con, moneydet);
+	}
 }

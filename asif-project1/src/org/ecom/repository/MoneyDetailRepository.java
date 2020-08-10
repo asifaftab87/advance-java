@@ -167,8 +167,8 @@ public class MoneyDetailRepository {
 					+ " where id=? ";
 			
 			pStatement = con.prepareStatement(query);
-			pStatement.setDouble(1, moneydet.getBalance());
-			pStatement.setDouble(2, moneydet.getUserid());
+			pStatement.setDouble(1, moneydet.getUserid());
+			pStatement.setDouble(2, moneydet.getBalance());
 			pStatement.setDate(3, sqlCreatDate);
 			pStatement.setDate(4, sqlUpdatDate);
 
@@ -195,46 +195,44 @@ public class MoneyDetailRepository {
 	}
 	
 	//Delete MoneyDetail
-	public static void deleteMoneyDetail(Connection con, MoneyDetail moneydet) {
+	public static int deleteMoneyDetail(Connection con, long id) {
 
-		System.out.println("-----------deleteMoneyDetailByID MoneyDetailid: "+moneydet);
-
+		System.out.println("-----------deleteMoneyDetail id: "+id);
+		
+		int executeUpdate = 0;
 		PreparedStatement pStatement = null;
-
+		
 		try {
-
-			// conversion from java.util.Date to java.sql.Date
-			java.sql.Date sqlCreatDate = new java.sql.Date(moneydet.getCreatedate().getTime());
-			java.sql.Date sqlUpdatDate = new java.sql.Date(moneydet.getUpdatedate().getTime());
-
 			String query = "delete from MoneyDetail where id=?";
-			
 			pStatement = con.prepareStatement(query);
-			pStatement.setDouble(1, moneydet.getBalance());
-			pStatement.setDouble(2, moneydet.getUserid());
-			pStatement.setDate(3, sqlCreatDate);
-			pStatement.setDate(4, sqlUpdatDate);
-
-			int executeUpdate = pStatement.executeUpdate();
-
-			if (executeUpdate > 0) {
-				System.out.println("data created successfully: " + executeUpdate);
-			} else {
-				System.out.println("failed to insert data: " + executeUpdate);
+			pStatement.setLong(1, id);
+			executeUpdate = pStatement.executeUpdate();
+			
+			if(executeUpdate>0) {
+				System.out.println("data deleted successfully: "+executeUpdate);
 			}
-		} catch (SQLException se) {
-			se.printStackTrace();
-		} catch (Exception e) {
-			System.out.println(e);
-		} finally {
+			else {
+				System.out.println("failed to delete data: "+executeUpdate);
+			}
+		} 
+		catch (Exception e) {
+			e.printStackTrace();
+		} 
+		finally {
 			try {
-				if (pStatement != null) {
+				if(pStatement!=null) {
 					pStatement.close();
 				}
-			} catch (SQLException e) {
+			} 
+			catch (SQLException e) {
 				e.printStackTrace();
-			}
+			}  
 		}
+		
+		return executeUpdate;
 	}
+	
+	
 }
+
 	
