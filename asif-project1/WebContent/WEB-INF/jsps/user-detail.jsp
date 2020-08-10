@@ -1,4 +1,5 @@
 <%@page import="org.ecom.model.Address"%>
+<%@page import="org.ecom.model.MoneyDetail"%>
 <%@page import="java.util.List"%>
 <%@page import="org.ecom.model.User"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
@@ -79,6 +80,28 @@
 						<td><%= address.getState() %></td>
 						<td><%= address.getCountry() %></td>
 						<td><%= address.getPincode() %></td>
+					</tr>
+				<%
+				}
+			%>
+		</table>
+		
+		  <h1>Money Details</h1>
+		  <table>
+			<tr>
+				<th>balance </th>
+				<th>Create date </th>
+				<th>Update date </th>
+			</tr>
+			<%
+				List<MoneyDetail> monetdetList = (List<MoneyDetail>)request.getAttribute("monetdetList");
+				for(MoneyDetail moneydet : monetdetList){
+				%>
+					<tr>
+						<td><%= moneydet.getBalance() %></td>
+						<td><%= moneydet.getCreatedate() %></td>
+						<td><%= moneydet.getUpdatedate() %></td>
+						
 					</tr>
 				<%
 				}

@@ -1,4 +1,4 @@
-<%@page import="org.ecom.model.User"%>
+<%@page import="org.ecom.model.MoneyDetail"%>
 <%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
@@ -47,20 +47,22 @@
 				<th>Update Date </th>
 			</tr>
 			<%
-				List<User> userList = (List<User>)request.getAttribute("userList");
-				for(User user : userList){
+				List<MoneyDetail> moneydetList = (List<MoneyDetail>)request.getAttribute("moneydetList");
+				for(MoneyDetail moneydet : moneydetList){
 				%>
 					<tr>
 						<td>
-							<a href="/asif-project1/user/detail?userId=<%= user.getId() %>">
-								<%= user.getFirstName() %>
+							<a href="/asif-project1/MoneyDetail?userId=<%= moneydet.getId() %>">
+								<%= moneydet.getUserid() %>
 							</a>
 						</td>
-						<td><%= user.getEmail() %></td>
-						<td><%= user.getGender() ? "male" : "female" %></td>
+						<td><%= moneydet.getBalance() %></td>
+						<td><%= moneydet.getCreatedate() %></td>
+						<td><%= moneydet.getUpdatedate() %></td>
+						
 						<td>
-							<a href="/asif-project1/user/delete?userId=<%= user.getId() %>">Delete</a>
-							<a href="/asif-project1/user/update?userId=<%= user.getId() %>">Update</a>
+							<a href="/asif-project1/MoneyDetail/delete?Id=<%= moneydet.getId() %>">Delete</a>
+							<a href="/asif-project1/MoneyDetail/update?Id=<%= moneydet.getId() %>">Update</a>
 						</td>
 					</tr>
 				<%

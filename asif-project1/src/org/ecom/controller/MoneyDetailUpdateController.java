@@ -53,7 +53,7 @@ public class MoneyDetailUpdateController extends HttpServlet {
 		String IdStr = request.getParameter("Id");
 		
 		System.out.println("MoneyDetail update do get Id: "+IdStr);
-		String useridString = request.getParameter("id");
+		String useridString = request.getParameter("Uid");
 		String balanceString = request.getParameter("num");
 		String CreateDate = request.getParameter("Cdate");
 		String UpdateDate = request.getParameter("Udate");

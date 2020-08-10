@@ -13,7 +13,7 @@ import org.ecom.constant.ProjectConstants;
 import org.ecom.model.MoneyDetail;
 import org.ecom.service.MoneyDetailService;
 
-public class MoneyDetailController extends HttpServlet {
+public class MoneyController extends HttpServlet {
 	
 	private static final long serialVersionUID = 1L;
 
@@ -21,7 +21,7 @@ public class MoneyDetailController extends HttpServlet {
 
 		System.out.println("MoneyDetailController doGet");
 		
-		String destination = ProjectConstants.JSP_FOLDER_PATH + "MoneyDetail-list.jsp";
+		String destination = ProjectConstants.JSP_FOLDER_PATH + "Money-list.jsp";
 		RequestDispatcher requestDispatcher = request.getRequestDispatcher(destination);
 		
 		MoneyDetailService moneydetService = new MoneyDetailService();
