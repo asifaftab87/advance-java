@@ -52,7 +52,7 @@
 				%>
 					<tr>
 						<td>
-							<a href="/asif-project1/MoneyDetail?userId=<%= moneydet.getId() %>">
+							<a href="/asif-project1/MoneyDetail?Id=<%= moneydet.getId() %>">
 								<%= moneydet.getUserid() %>
 							</a>
 						</td>

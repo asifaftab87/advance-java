@@ -177,8 +177,8 @@ public class MoneyDetailRepository {
 
 			String query = "INSERT INTO MoneyDetail(userid, balance, createdate , updatedate ) " + " VALUES (?,?, ?, ?)";
 			pStatement = con.prepareStatement(query);
-			pStatement.setDouble(1, moneydet.getBalance());
-			pStatement.setDouble(2, moneydet.getUserid());
+			pStatement.setInt(1, moneydet.getUserid());
+			pStatement.setDouble(2, moneydet.getBalance());
 			pStatement.setDate(3, sqlCreatDate);
 			pStatement.setDate(4, sqlUpdatDate);
 
