@@ -42,4 +42,17 @@ public class AddressService {
 		return addressList;
 	}
 	
+	public List<Address> findAddressByEmployeeId(long employeeId){
+		
+		List<Address> addressList = new ArrayList<>();
+		
+		if(con!=null) {
+			addressList = AddressRepository.findAddressByEmployeeId(con, employeeId);
+		}
+		
+		return addressList;
+	}
+
+
+	
 }

@@ -2,7 +2,7 @@ package org.ecom.model;
 
 import java.io.Serializable;
 
-public class Emp implements Serializable{
+public class Employee implements Serializable{
 
 	private static final long serialVersionUID = -1443814004539007341L;
 	
@@ -12,7 +12,7 @@ public class Emp implements Serializable{
 	private String name;
 	private int age;
 	
-	public Emp() {}
+	public Employee() {}
 	
 	public int getId() {
 		return id;
@@ -33,5 +33,9 @@ public class Emp implements Serializable{
 		this.age = age;
 	}
 
-	
+	@Override
+	public String toString() {
+		return "id: "+id+"   name: "+name+"   age: "+age;
+		
+	}
 }

@@ -8,7 +8,9 @@
 	<welcome-file-list>
 		<welcome-file>index.jsp</welcome-file>
 	</welcome-file-list>
-
+	
+	
+	
 	<servlet>
 		<servlet-name>userServlet</servlet-name>
 		<servlet-class>org.ecom.controller.UserController</servlet-class>
@@ -18,6 +20,26 @@
 		<servlet-name>userServlet</servlet-name>
 		<url-pattern>/user/list</url-pattern>
 	</servlet-mapping>
+	
+	
+	<servlet>
+	<servlet-name>employeeServlet</servlet-name>
+	<servlet-class>org.ecom.controller.EmployeeController</servlet-class>
+	</servlet>
+					
+	<servlet-mapping>
+	<servlet-name>employeeServlet</servlet-name>
+	<url-pattern>/employeeController/list</url-pattern>
+	</servlet-mapping>
+					
+	
+	
+	
+	
+	
+	
+
+
 
 	<servlet>
 		<servlet-name>deleteServlet</servlet-name>
@@ -29,6 +51,26 @@
 		<url-pattern>/user/delete</url-pattern>
 	</servlet-mapping>
 	
+	
+	<servlet>
+		<servlet-name>employeeDeleteServlet</servlet-name>
+		<servlet-class>org.ecom.controller.EmployeeDeleteController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>employeeDeleteServlet</servlet-name>
+		<url-pattern>/employeeDeleteController/delete</url-pattern>
+	</servlet-mapping>
+	
+	
+	
+	
+
+
+
+
+
+	
 	<servlet>
 		<servlet-name>createServlet</servlet-name>
 		<servlet-class>org.ecom.controller.UserCreateController</servlet-class>
@@ -38,6 +80,26 @@
 		<servlet-name>createServlet</servlet-name>
 		<url-pattern>/user/add</url-pattern>
 	</servlet-mapping>
+	
+				
+	<servlet>
+		<servlet-name>employeeCreateServlet</servlet-name>
+		<servlet-class>org.ecom.controller.EmployeeCreateController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>employeeCreateServlet</servlet-name>
+		<url-pattern>/employeeCreateController/add</url-pattern>
+	</servlet-mapping>
+	
+	
+	
+	
+	
+
+
+
+
 	
 	<servlet>
 		<servlet-name>updateServlet</servlet-name>
@@ -49,6 +111,26 @@
 		<url-pattern>/user/update</url-pattern>
 	</servlet-mapping>
 	
+	
+	<servlet>
+		<servlet-name>employeeUpdateServlet</servlet-name>
+		<servlet-class>org.ecom.controller.EmployeeUpdateController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>employeeUpdateServlet</servlet-name>
+		<url-pattern>/employeeUpdateController/update</url-pattern>
+	</servlet-mapping>
+	
+	
+	
+	
+
+
+
+
+
+		
 	<servlet>
 		<servlet-name>detailServlet</servlet-name>
 		<servlet-class>org.ecom.controller.UserDetailController</servlet-class>
@@ -60,4 +142,16 @@
 	</servlet-mapping>
 	
 	
+	<servlet>
+		<servlet-name>employeeDetailServlet</servlet-name>
+		<servlet-class>org.ecom.controller.EmployeeDetailController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>employeeDetailServlet</servlet-name>
+		<url-pattern>/employeeDetailController/detail</url-pattern>
+	</servlet-mapping>
+	
+	
+		
 </web-app>
