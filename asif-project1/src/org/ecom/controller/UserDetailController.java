@@ -1,3 +1,4 @@
+
 package org.ecom.controller;
 
 import java.io.IOException;
@@ -11,8 +12,10 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.ecom.constant.ProjectConstants;
 import org.ecom.model.Address;
+import org.ecom.model.MoneyDetail;
 import org.ecom.model.User;
 import org.ecom.service.AddressService;
+import org.ecom.service.MoneyDetailService;
 import org.ecom.service.UserService;
 
 public class UserDetailController extends HttpServlet {
@@ -40,6 +43,25 @@ public class UserDetailController extends HttpServlet {
 				AddressService addressService = new AddressService();
 				List<Address> addressList = addressService.findAddressByUserId(userId);
 				request.setAttribute("addressList", addressList);
+			}
+		}
+		catch(Exception e) {
+			System.out.println(e.getMessage());
+		}
+		
+		
+		try {
+			long userId = Long.valueOf(userIdStr);
+			User user = userService.findUserById(userId);
+			
+			if(user!=null) {
+				
+				//pass value to jsp 
+				request.setAttribute("user", user);
+				
+				MoneyDetailService moneydetService = new MoneyDetailService();
+				List<MoneyDetail> monetdetList = moneydetService.findMoneyDetailByUserId(userId);
+				request.setAttribute("monetdetList", monetdetList);
 			}
 		}
 		catch(Exception e) {
