@@ -228,7 +228,7 @@ public class MoneyDetailRepository {
 			int executeUpdate = pStatement.executeUpdate();
 
 			if (executeUpdate > 0) {
-				System.out.println("data created successfully: " + executeUpdate);
+				System.out.println("data updated successfully: " + executeUpdate);
 			} else {
 				System.out.println("failed to insert data: " + executeUpdate);
 			}

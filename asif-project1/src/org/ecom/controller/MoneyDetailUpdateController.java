@@ -82,7 +82,7 @@ public class MoneyDetailUpdateController extends HttpServlet {
 			moneydet.setBalance(Double.valueOf(balanceString));
 			moneydet.setCreatedate(Cdate);
 			moneydet.setUpdatedate(Udate);
-			moneydetService.createMoneyDetail(moneydet);
+			moneydetService.updateMoneyDetail(moneydet);
 
 		} catch (ParseException e) {
 			e.printStackTrace();

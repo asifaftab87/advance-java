@@ -8,9 +8,7 @@
 	<welcome-file-list>
 		<welcome-file>index.jsp</welcome-file>
 	</welcome-file-list>
-	
-	
-	
+
 	<servlet>
 		<servlet-name>userServlet</servlet-name>
 		<servlet-class>org.ecom.controller.UserController</servlet-class>
@@ -20,24 +18,17 @@
 		<servlet-name>userServlet</servlet-name>
 		<url-pattern>/user/list</url-pattern>
 	</servlet-mapping>
-	
-	
+
+
 	<servlet>
-	<servlet-name>employeeServlet</servlet-name>
-	<servlet-class>org.ecom.controller.EmployeeController</servlet-class>
+		<servlet-name>employeeServlet</servlet-name>
+		<servlet-class>org.ecom.controller.EmployeeController</servlet-class>
 	</servlet>
-					
+
 	<servlet-mapping>
-	<servlet-name>employeeServlet</servlet-name>
-	<url-pattern>/employeeController/list</url-pattern>
+		<servlet-name>employeeServlet</servlet-name>
+		<url-pattern>/employeeController/list</url-pattern>
 	</servlet-mapping>
-					
-	
-	
-	
-	
-	
-	
 
 
 
@@ -50,9 +41,7 @@
 		<servlet-name>deleteServlet</servlet-name>
 		<url-pattern>/user/delete</url-pattern>
 	</servlet-mapping>
-<<<<<<< HEAD
-	
-	
+
 	<servlet>
 		<servlet-name>employeeDeleteServlet</servlet-name>
 		<servlet-class>org.ecom.controller.EmployeeDeleteController</servlet-class>
@@ -62,19 +51,8 @@
 		<servlet-name>employeeDeleteServlet</servlet-name>
 		<url-pattern>/employeeDeleteController/delete</url-pattern>
 	</servlet-mapping>
-	
-	
-	
-	
 
 
-
-
-
-	
-=======
-
->>>>>>> branch 'master' of https://github.com/asifaftab87/advance-java.git
 	<servlet>
 		<servlet-name>createServlet</servlet-name>
 		<servlet-class>org.ecom.controller.UserCreateController</servlet-class>
@@ -84,9 +62,9 @@
 		<servlet-name>createServlet</servlet-name>
 		<url-pattern>/user/add</url-pattern>
 	</servlet-mapping>
-<<<<<<< HEAD
-	
-				
+
+
+
 	<servlet>
 		<servlet-name>employeeCreateServlet</servlet-name>
 		<servlet-class>org.ecom.controller.EmployeeCreateController</servlet-class>
@@ -96,19 +74,8 @@
 		<servlet-name>employeeCreateServlet</servlet-name>
 		<url-pattern>/employeeCreateController/add</url-pattern>
 	</servlet-mapping>
-	
-	
-	
-	
-	
 
 
-
-
-	
-=======
-
->>>>>>> branch 'master' of https://github.com/asifaftab87/advance-java.git
 	<servlet>
 		<servlet-name>updateServlet</servlet-name>
 		<servlet-class>org.ecom.controller.UserUpdateController</servlet-class>
@@ -118,9 +85,8 @@
 		<servlet-name>updateServlet</servlet-name>
 		<url-pattern>/user/update</url-pattern>
 	</servlet-mapping>
-<<<<<<< HEAD
-	
-	
+
+
 	<servlet>
 		<servlet-name>employeeUpdateServlet</servlet-name>
 		<servlet-class>org.ecom.controller.EmployeeUpdateController</servlet-class>
@@ -130,19 +96,8 @@
 		<servlet-name>employeeUpdateServlet</servlet-name>
 		<url-pattern>/employeeUpdateController/update</url-pattern>
 	</servlet-mapping>
-	
-	
-	
-	
 
 
-
-
-
-		
-=======
-
->>>>>>> branch 'master' of https://github.com/asifaftab87/advance-java.git
 	<servlet>
 		<servlet-name>detailServlet</servlet-name>
 		<servlet-class>org.ecom.controller.UserDetailController</servlet-class>
@@ -172,9 +127,8 @@
 		<servlet-name>delmoneyServlet</servlet-name>
 		<url-pattern>/MoneyDetail/delete</url-pattern>
 	</servlet-mapping>
-	
-<<<<<<< HEAD
-	
+
+
 	<servlet>
 		<servlet-name>employeeDetailServlet</servlet-name>
 		<servlet-class>org.ecom.controller.EmployeeDetailController</servlet-class>
@@ -184,10 +138,8 @@
 		<servlet-name>employeeDetailServlet</servlet-name>
 		<url-pattern>/employeeDetailController/detail</url-pattern>
 	</servlet-mapping>
-	
-	
-		
-=======
+
+
 	<servlet>
 		<servlet-name>createmoneyServlet</servlet-name>
 		<servlet-class>org.ecom.controller.MoneyDetailCreateController</servlet-class>
@@ -205,9 +157,7 @@
 
 	<servlet-mapping>
 		<servlet-name>updmoneyServlet</servlet-name>
-		<url-pattern>/MoneyDetail/Update</url-pattern>
+		<url-pattern>/MoneyDetail/update</url-pattern>
 	</servlet-mapping>
 
-
->>>>>>> branch 'master' of https://github.com/asifaftab87/advance-java.git
 </web-app>
