@@ -253,35 +253,43 @@ public class UserRepository {	//DAO Data Access Object
 	
 	public static List<User> getUserByName(Connection con, String name){
 		
-
+		System.out.println("name: "+name);
 		List<User> userList = new ArrayList<>();
-		String query = " select from user where firstname like ? ";
-		
+		String query = " select * from user where firstname like ? "; 
+					 
+		ResultSet rs = null;
 		try(PreparedStatement pStatement = con.prepareStatement(query)) {
 			
-			pStatement.setString(1, "%" + name + "%");
-			ResultSet rs = pStatement.executeQuery();
+			pStatement.setString(1,  "%" + name + "%");
 			
-			if(rs!=null) {
-				
-				while(rs.next())  {
-					  
-					User user = new User();
-					user.setId(rs.getInt(1));
-					user.setFirstName(rs.getString(2));
-					user.setLastName(rs.getString(3));
-					user.setDob(rs.getDate(4));
-					user.setEmail(rs.getString(5));
-					user.setFatherName(rs.getString(6));
-					user.setGender(rs.getBoolean(7));
-					userList.add(user);
-				}
+			rs = pStatement.executeQuery();
+			
+			while(rs.next())  {
+				  
+				User user = new User();
+				user.setId(rs.getInt(1));
+				user.setFirstName(rs.getString(2));
+				user.setLastName(rs.getString(3));
+				user.setDob(rs.getDate(4));
+				user.setEmail(rs.getString(5));
+				user.setFatherName(rs.getString(6));
+				user.setGender(rs.getBoolean(7));
+				userList.add(user);
 			}
 		}
 		catch(Exception e) {
 			e.printStackTrace();
 		}
-		
+		finally {
+			try {
+				if(rs!=null) {
+					rs.close();
+				}
+			} 
+			catch (SQLException e) {
+				e.printStackTrace();
+			}  
+		}
 		return userList;
 	}
 	
