@@ -17,6 +17,7 @@ public class UserController extends HttpServlet {
 	
 	private static final long serialVersionUID = 1L;
 
+	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		System.out.println("UserController doGet");
@@ -30,13 +31,13 @@ public class UserController extends HttpServlet {
 		//send value from java class to jsp 
 		request.setAttribute("userList", userList);
 		userService.connectionClose();
-		
-		requestDispatcher.forward(request, response);
+		try {
+			requestDispatcher.forward(request, response);
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+		}
 	}
 
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
-		doGet(request, response);
-	}
 
 }
