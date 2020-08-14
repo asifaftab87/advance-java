@@ -38,7 +38,20 @@
 				<input type="submit" value="Add User" style="float: right;" />
 			</form>
 		</div>
+
+		<br />
+		<br />
+
+		<div>
+			<form action="/asif-project1/user/search">
+				<input type="text" placeholder="Enter Name" />
+				<input type="submit" value="Search" />
+			</form>
+		</div>
 		
+		<br />
+		<br />
+
 		<table>
 			<tr>
 				<th>First Name</th>
@@ -48,22 +61,31 @@
 			</tr>
 			<%
 				List<User> userList = (List<User>)request.getAttribute("userList");
-				for(User user : userList){
-				%>
-					<tr>
-						<td>
-							<a href="/asif-project1/user/detail?userId=<%= user.getId() %>">
-								<%= user.getFirstName() %>
-							</a>
-						</td>
-						<td><%= user.getEmail() %></td>
-						<td><%= user.getGender() ? "male" : "female" %></td>
-						<td>
-							<a href="/asif-project1/user/delete?userId=<%= user.getId() %>">Delete</a>
-							<a href="/asif-project1/user/update?userId=<%= user.getId() %>">Update</a>
-						</td>
-					</tr>
-				<%
+				if(!userList.isEmpty()){
+					for(User user : userList){
+						%>
+							<tr>
+								<td>
+									<a href="/asif-project1/user/detail?userId=<%= user.getId() %>">
+										<%= user.getFirstName() %>
+									</a>
+								</td>
+								<td><%= user.getEmail() %></td>
+								<td><%= user.getGender() ? "male" : "female" %></td>
+								<td>
+									<a href="/asif-project1/user/delete?userId=<%= user.getId() %>">Delete</a>
+									<a href="/asif-project1/user/update?userId=<%= user.getId() %>">Update</a>
+								</td>
+							</tr>
+						<%
+					}
+				}
+				else{
+					%>
+						<tr>
+							<td colspan="4">No user found</td>
+						</tr>
+					<%
 				}
 			%>
 		</table>

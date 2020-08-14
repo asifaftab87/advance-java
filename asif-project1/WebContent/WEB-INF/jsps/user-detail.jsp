@@ -72,16 +72,26 @@
 			</tr>
 			<%
 				List<Address> addressList = (List<Address>)request.getAttribute("addressList");
-				for(Address address : addressList){
-				%>
-					<tr>
-						<td><%= address.getStreet() %></td>
-						<td><%= address.getCity() %></td>
-						<td><%= address.getState() %></td>
-						<td><%= address.getCountry() %></td>
-						<td><%= address.getPincode() %></td>
-					</tr>
-				<%
+				
+				if(!addressList.isEmpty()){
+					for(Address address : addressList){
+						%>
+							<tr>
+								<td><%= address.getStreet() %></td>
+								<td><%= address.getCity() %></td>
+								<td><%= address.getState() %></td>
+								<td><%= address.getCountry() %></td>
+								<td><%= address.getPincode() %></td>
+							</tr>
+						<%
+					}
+				}
+				else{
+					%>
+						<tr>
+							<td colspan="5">No Address found</td>
+						</tr>
+					<%
 				}
 			%>
 		</table>
