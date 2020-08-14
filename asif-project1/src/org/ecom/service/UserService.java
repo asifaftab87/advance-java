@@ -54,4 +54,9 @@ public class UserService {
 	public void updateUser(User user) {
 		UserRepository.updateUser(con, user);
 	}
+	
+	public List<User> getUserByName(String name){
+		return UserRepository.getUserByName(con, name);
+	}
+	
 }

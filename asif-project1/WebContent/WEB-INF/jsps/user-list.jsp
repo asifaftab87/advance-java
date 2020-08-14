@@ -44,7 +44,7 @@
 
 		<div>
 			<form action="/asif-project1/user/search">
-				<input type="text" placeholder="Enter Name" />
+				<input type="text" placeholder="Enter Name" name="name" />
 				<input type="submit" value="Search" />
 			</form>
 		</div>

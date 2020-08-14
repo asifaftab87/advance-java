@@ -160,4 +160,14 @@
 		<url-pattern>/MoneyDetail/update</url-pattern>
 	</servlet-mapping>
 
+	<servlet>
+		<servlet-name>userSearchServlet</servlet-name>
+		<servlet-class>org.ecom.controller.UserSearchController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>userSearchServlet</servlet-name>
+		<url-pattern>/user/search</url-pattern>
+	</servlet-mapping>
+
 </web-app>
