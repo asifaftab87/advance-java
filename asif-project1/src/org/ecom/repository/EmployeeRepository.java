@@ -236,6 +236,43 @@ public class EmployeeRepository {
 		return executeUpdate;
 	}
 
-	
-	
+	public static List<Employee> getEmployeeByName(Connection con, String name) {
+		
+		System.out.println("name: "+name);
+		List<Employee> employeeList = new ArrayList<>();
+		String query = " select * from employee where name like ? "; 
+					 
+		ResultSet rs = null;
+		try(PreparedStatement pStatement = con.prepareStatement(query)) {
+			
+			pStatement.setString(1,  "%" + name + "%");
+			
+			rs = pStatement.executeQuery();
+			
+			while(rs.next())  {
+				  
+				Employee employee = new Employee();
+				employee.setId(rs.getInt(1));
+				employee.setName(rs.getString(2));
+				employee.setAge(rs.getInt(3));
+			
+				employeeList.add(employee);
+			}
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+		}
+		finally {
+			try {
+				if(rs!=null) {
+					rs.close();
+				}
+			} 
+			catch (SQLException e) {
+				e.printStackTrace();
+			}  
+		}
+		return employeeList;
+	}
+		
 }

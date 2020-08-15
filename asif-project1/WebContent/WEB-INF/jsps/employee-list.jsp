@@ -39,6 +39,18 @@
 			</form>
 		</div>
 		
+		<br />
+		<br />
+
+		<div>
+			<form action="/asif-project1/employeeSearchController/search">
+				<input type="text" placeholder="Enter Name" name="name" />
+				<input type="submit" value="Search" />
+			</form>
+		</div>
+		
+		<br />
+		<br />
 		<table>
 			<tr>
 				<th>Name</th>
@@ -47,7 +59,8 @@
 			</tr>
 			<%
 				List<Employee> employeeList = (List<Employee>)request.getAttribute("employeeList");
-				for(Employee employee : employeeList){
+				if(!employeeList.isEmpty()){	
+					for(Employee employee : employeeList){
 				%>
 					<tr>
 						<td>
@@ -63,7 +76,14 @@
 					</tr>
 				<%
 				}
-			%>
-		</table>
+			}
+				else{
+					%>
+						<tr>
+							<td colspan="4">No employee found</td>
+						</tr>
+					<%
+				}
+			%>		</table>
 	</body>
 </html>

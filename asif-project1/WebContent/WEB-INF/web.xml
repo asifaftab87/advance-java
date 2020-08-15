@@ -170,4 +170,13 @@
 		<url-pattern>/user/search</url-pattern>
 	</servlet-mapping>
 
+	<servlet>
+		<servlet-name>employeeSearchServlet</servlet-name>
+		<servlet-class>org.ecom.controller.EmployeeSearchController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>employeeSearchServlet</servlet-name>
+		<url-pattern>/employeeSearchController/search</url-pattern>
+	</servlet-mapping>
 </web-app>

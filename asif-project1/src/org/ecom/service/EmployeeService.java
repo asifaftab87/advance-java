@@ -55,4 +55,8 @@ private Connection con = null;
 		EmployeeRepository.updateEmployee(con, employee);
 	}
 
+	public List<Employee> getEmployeeByName(String name) {
+		return EmployeeRepository.getEmployeeByName(con, name);
+	}
+
 }
