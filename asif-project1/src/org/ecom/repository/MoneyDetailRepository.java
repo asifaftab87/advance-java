@@ -9,7 +9,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.ecom.model.MoneyDetail;
-import org.ecom.model.User;
 
 
 public class MoneyDetailRepository {

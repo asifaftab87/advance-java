@@ -5,9 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.ecom.model.MoneyDetail;
-import org.ecom.model.User;
 import org.ecom.repository.MoneyDetailRepository;
-import org.ecom.repository.UserRepository;
 import org.ecom.util.GetSqlConnection;
 
 public class MoneyDetailService {
