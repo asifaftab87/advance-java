@@ -32,6 +32,12 @@ create table MoneyDetail(
 	updatedate DATE
 );
 
+create table credit_card(
+	cc_id int(5) auto_increment primary key,
+	cc_num varchar(100) not null,
+	holder_name varchar(100),
+	expiry_date Date
+);
 
 INSERT INTO db1.address (userid, street, city, state, country, pincode) VALUES (13, 'loha pool', 'kolkata', 'wb', 'india', '700019');
 

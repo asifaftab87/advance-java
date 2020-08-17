@@ -15,6 +15,6 @@
 		<h2><a href="employeeController/list">Employee</a></h2>
 		<h2><a href="address/list">Address</a></h2>
 		<h2><a href="MoneyDetail/list">MoneyDetail</a></h2>
-
+		<h2><a href="CreditCard/list">CreditCard</a></h2>
 	</body>
 </html>

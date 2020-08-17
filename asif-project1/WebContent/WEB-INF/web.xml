@@ -29,7 +29,16 @@
 		<servlet-name>employeeServlet</servlet-name>
 		<url-pattern>/employeeController/list</url-pattern>
 	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>CreditCardServlet</servlet-name>
+		<servlet-class>org.ecom.controller.CreditCardController</servlet-class>
+	</servlet>
 
+	<servlet-mapping>
+		<servlet-name>CreditCardServlet</servlet-name>
+		<url-pattern>/CreditCard/list</url-pattern>
+	</servlet-mapping>
 
 
 	<servlet>
@@ -50,6 +59,16 @@
 	<servlet-mapping>
 		<servlet-name>employeeDeleteServlet</servlet-name>
 		<url-pattern>/employeeDeleteController/delete</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>CreditCardDeleteServlet</servlet-name>
+		<servlet-class>org.ecom.controller.CreditCardDeleteController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>CreditCardDeleteServlet</servlet-name>
+		<url-pattern>/CreditCard/Delete</url-pattern>
 	</servlet-mapping>
 
 
@@ -75,6 +94,15 @@
 		<url-pattern>/employeeCreateController/add</url-pattern>
 	</servlet-mapping>
 
+	<servlet>
+		<servlet-name>CreditCardCreateServlet</servlet-name>
+		<servlet-class>org.ecom.controller.CreditCardCreateController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>CreditCardCreateServlet</servlet-name>
+		<url-pattern>/CreditCard/add</url-pattern>
+	</servlet-mapping>
 
 	<servlet>
 		<servlet-name>updateServlet</servlet-name>
@@ -97,6 +125,15 @@
 		<url-pattern>/employeeUpdateController/update</url-pattern>
 	</servlet-mapping>
 
+	<servlet>
+		<servlet-name>CreditCardUpdateServlet</servlet-name>
+		<servlet-class>org.ecom.controller.CreditCardUpdateController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>CreditCardUpdateServlet</servlet-name>
+		<url-pattern>/CreditCard/Update</url-pattern>
+	</servlet-mapping>
 
 	<servlet>
 		<servlet-name>detailServlet</servlet-name>
@@ -138,7 +175,16 @@
 		<servlet-name>employeeDetailServlet</servlet-name>
 		<url-pattern>/employeeDetailController/detail</url-pattern>
 	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>CreditCardDetailServlet</servlet-name>
+		<servlet-class>org.ecom.controller.CreditCardDetailController</servlet-class>
+	</servlet>
 
+	<servlet-mapping>
+		<servlet-name>CreditCardDetailServlet</servlet-name>
+		<url-pattern>/CreditCard/Detail</url-pattern>
+	</servlet-mapping>
 
 	<servlet>
 		<servlet-name>createmoneyServlet</servlet-name>
@@ -178,5 +224,15 @@
 	<servlet-mapping>
 		<servlet-name>employeeSearchServlet</servlet-name>
 		<url-pattern>/employeeSearchController/search</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>CreditCardSearchServlet</servlet-name>
+		<servlet-class>org.ecom.controller.CreditCardSearchController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>CreditCardSearchServlet</servlet-name>
+		<url-pattern>/CreditCard/Search</url-pattern>
 	</servlet-mapping>
 </web-app>
