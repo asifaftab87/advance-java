@@ -56,6 +56,7 @@
 				<th>Cc_Num</th>
 				<th>Holder_Name</th>
 				<th>Expiry_Date</th>
+				<th>Action</th>
 			</tr>
 			<%
 				List<CreditCard> CreditCardList = (List<CreditCard>)request.getAttribute("creditcardList");
