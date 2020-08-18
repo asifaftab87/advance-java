@@ -4,7 +4,6 @@ import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -22,15 +21,15 @@ public class CreditCardUpdateController extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	
-		String Cc_IdStr = request.getParameter("Cc_Id");
+		String creditcardcc_IdStr = request.getParameter("creditcardcc_Id");
 		
-		System.out.println(" CreditCard update do get Cc_Id: "+Cc_IdStr);
+		System.out.println(" CreditCard update do get creditcardcc_Id: "+creditcardcc_IdStr);
 		
 		CreditCardService creditcardService = new CreditCardService();
 		
 		try {
-			long Cc_Id = Long.valueOf(Cc_IdStr);
-			List<CreditCard> creditcard = creditcardService.findCreditCardByCc_Id(Cc_Id);
+			long creditcardcc_Id = Long.valueOf(creditcardcc_IdStr);
+			CreditCard creditcard = creditcardService.findCreditCardByCc_Id(creditcardcc_Id);
 			
 			if(creditcard!=null) {
 				request.setAttribute("creditcard", creditcard);
@@ -49,16 +48,16 @@ public class CreditCardUpdateController extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-		String Cc_IdStr = request.getParameter("cc_id");
+		String creditcardcc_IdStr = request.getParameter("creditcardcc_id");
 		
-		System.out.println("Creditcard update do get Cc_Id: "+Cc_IdStr);
-		String Cc_numString = request.getParameter("cc_num");
-		String Holder_nameString = request.getParameter("hname");
-		String Expiry_Date = request.getParameter("Edate");
+		System.out.println("Creditcard update do get creditcardcc_Id: "+creditcardcc_IdStr);
+		String Cc_num = request.getParameter("cc_num");
+		String Holder_name = request.getParameter("hname");
+		String Expiry_DateString = request.getParameter("Edate");
 
-		System.out.println("cc_num: " + Cc_numString);
-		System.out.println("holder_name: " + Holder_nameString);
-		System.out.println("Expiry_Date: " + Expiry_Date);
+		System.out.println("cc_num: " + Cc_num);
+		System.out.println("holder_name: " + Holder_name);
+		System.out.println("Expiry_Date: " + Expiry_DateString);
 		
 	
 		CreditCardService creditcardService = new CreditCardService();
@@ -69,15 +68,15 @@ public class CreditCardUpdateController extends HttpServlet {
 
 		try {
 			
-			int Cc_Id = Integer.valueOf(Cc_IdStr); 
+			int creditcardcc_Id = Integer.valueOf(creditcardcc_IdStr); 
 			
-			Edate = formatter.parse(Expiry_Date);
+			Edate = formatter.parse(Expiry_DateString);
 			System.out.println(Edate);
 
 			CreditCard creditcard = new CreditCard();
-			creditcard.setCc_id(Cc_Id);
-			creditcard.setCc_num(String.valueOf(Cc_numString));
-			creditcard.setHolder_name(String.valueOf(Holder_nameString));
+			creditcard.setCc_id(creditcardcc_Id);
+			creditcard.setCc_num(String.valueOf(Cc_num));
+			creditcard.setHolder_name(String.valueOf(Holder_name));
 			creditcard.setExpiry_date(Edate);
 			creditcardService.updateCreditCard(creditcard);
 

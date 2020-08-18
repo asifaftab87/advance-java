@@ -46,9 +46,9 @@ public class CreditCard implements Serializable {
 		this.expiry_date = expiry_date;
 	}
 	
-	/*/@Override
+	@Override
 	public String toString() {
 		return "cc_id: "+cc_id+"   cc_num: "+cc_num+"   holder_name: "+holder_name+"   expiry_date: "+expiry_date;
-	}/*/
+	}
 }
 

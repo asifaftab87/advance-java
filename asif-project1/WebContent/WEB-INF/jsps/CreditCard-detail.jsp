@@ -1,4 +1,5 @@
 <%@page import="org.ecom.model.Address"%>
+<%@page import="org.ecom.model.MoneyDetail"%>
 <%@page import="java.util.List"%>
 <%@page import="org.ecom.model.CreditCard"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
@@ -40,14 +41,11 @@
 		</div>
 		
 		<h1>Update Detail</h1>
-		
-		  <label for="cc_id">Cc_Id:</label><br>
-		  <input type="text" id="cc_id" name="cc_id" value="<%= creditcard.getCc_id() %>" readonly="readonly" /><br><br>
 		  
 		  <label for="cc_num">Cc_Num:</label><br>
 		  <input type="text" id="cc_num" name="cc_num" value="<%= creditcard.getCc_num() %>" readonly="readonly" /><br><br>
 		  
-		  <label for="hname">Balance:</label><br>
+		  <label for="hname">Holder_Name:</label><br>
 		  <input type="text" id="hname" name="hname" value="<%= creditcard.getHolder_name() %>" readonly="readonly" /><br><br>
 		  
 		  <label for="Edate">Expiry_Date:</label><br>
@@ -66,19 +64,20 @@
 			</tr>
 			<%
 				List<Address> addressList = (List<Address>)request.getAttribute("addressList");
-				if(!addressList.isEmpty()){	
+				
+				if(!addressList.isEmpty()){
 					for(Address address : addressList){
-				%>
-					<tr>
-						<td><%= address.getStreet() %></td>
-						<td><%= address.getCity() %></td>
-						<td><%= address.getState() %></td>
-						<td><%= address.getCountry() %></td>
-						<td><%= address.getPincode() %></td>
-					</tr>
-				<%
+						%>
+							<tr>
+								<td><%= address.getStreet() %></td>
+								<td><%= address.getCity() %></td>
+								<td><%= address.getState() %></td>
+								<td><%= address.getCountry() %></td>
+								<td><%= address.getPincode() %></td>
+							</tr>
+						<%
+					}
 				}
-			}
 				else{
 					%>
 						<tr>
@@ -89,5 +88,27 @@
 			%>
 		</table>
 		
-		</body>
-	</html>
+		  <h1>Money Details</h1>
+		  <table>
+			<tr>
+				<th>balance </th>
+				<th>Create date </th>
+				<th>Update date </th>
+			</tr>
+			<%
+				List<MoneyDetail> monetdetList = (List<MoneyDetail>)request.getAttribute("monetdetList");
+				for(MoneyDetail moneydet : monetdetList){
+				%>
+					<tr>
+						<td><%= moneydet.getBalance() %></td>
+						<td><%= moneydet.getCreatedate() %></td>
+						<td><%= moneydet.getUpdatedate() %></td>
+						
+					</tr>
+				<%
+				}
+			%>
+		</table>
+		
+	</body>
+</html>

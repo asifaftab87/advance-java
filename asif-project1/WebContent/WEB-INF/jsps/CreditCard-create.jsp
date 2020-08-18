@@ -5,7 +5,7 @@
 <html>
 	<head>
 		<meta charset="ISO-8859-1">
-		<title>Create CreditCard </title>
+		<title>Create CreditCard</title>
 		<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 	    <link rel="stylesheet" href="/resources/demos/style.css">
 	    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
@@ -23,22 +23,19 @@
 		</div>
 		
 		<div>
-			<h2><a href="/asif-project1/CreditCard/add">CreditCard</a></h2>
+			<h2><a href="/asif-project1/CreditCard/list">CreditCard Detail</a></h2>
 		</div>
 		
 		<h1>Add CreditCard</h1>
 		<form action="/asif-project1/CreditCard/add" method="post">
-
 		  <label for="cc_num">Cc_Num :</label><br>
 		  <input type="text" id="cc_num" name="cc_num"><br>
 		  
-		  <label for="hname">holder_Name :</label><br>
+		  <label for="hname">Holder_Name :</label><br>
 		  <input type="text" id="hname" name="hname"><br>
 		  
 		  <label for="Edate">Expiry_date :</label><br>
 		  <input type="text" id="datepicker" name="Edate"><br>
-		  
-
 		  
 		  <input type="submit" value="Submit">
 		</form> 

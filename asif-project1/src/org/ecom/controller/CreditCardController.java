@@ -14,9 +14,10 @@ import org.ecom.model.CreditCard;
 import org.ecom.service.CreditCardService;
 
 public class CreditCardController extends HttpServlet {
+	
 	private static final long serialVersionUID = 1L;
 
-
+	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		System.out.println("CreditCardController doGet");
 		

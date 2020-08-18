@@ -22,28 +22,28 @@ public class CreditCardService {
 
 	public List<CreditCard> getAllCreditCard() {
 
-		List<CreditCard> CreditCardList = new ArrayList<>();
+		List<CreditCard> creditcardList = new ArrayList<>();
 
 		if (con != null) {
-			CreditCardList = CreditCardRepository.getAllCreditCard(con);
+			creditcardList = CreditCardRepository.getAllCreditCard(con);
 		}
 
-		return CreditCardList;
+		return creditcardList;
 	}
 
-	public List<CreditCard> findCreditCardByCc_Id(long Cc_Id) {
+	public CreditCard findCreditCardByCc_Id(long creditcardcc_Id) {
 
-		List<CreditCard> CreditCardList = new ArrayList<>();
+		CreditCard creditcard = null;
 
 		if (con != null) {
-			CreditCardList = CreditCardRepository.findCreditCardByCc_Id(con, Cc_Id);
+			creditcard = CreditCardRepository.findCreditCardByCc_Id(con, creditcardcc_Id);
 		}
 
-		return CreditCardList;
+		return creditcard;
 	}
 	
-	public int deleteCreditCardByCc_Id(long Cc_Id) {
-		return CreditCardRepository.deleteCreditCardByCc_Id(con, Cc_Id);
+	public int deleteCreditCardByCc_Id(long creditcardcc_Id) {
+		return CreditCardRepository.deleteCreditCardByCc_Id(con, creditcardcc_Id);
 	}
 
 	public void createCreditCard(CreditCard creditcard) {

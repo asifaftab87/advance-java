@@ -18,7 +18,7 @@ import org.ecom.service.CreditCardService;
 public class CreditCardCreateController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-
+	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		String destination = ProjectConstants.JSP_FOLDER_PATH + "CreditCard-create.jsp";
@@ -29,13 +29,13 @@ public class CreditCardCreateController extends HttpServlet {
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		String Cc_numString = request.getParameter("cc_num");
-		String Holder_nameString = request.getParameter("hname");
-		String Expiry_Date = request.getParameter("Edate");
+		String Cc_num = request.getParameter("cc_num");
+		String Holder_name = request.getParameter("hname");
+		String Expiry_DateString = request.getParameter("Edate");
 
-		System.out.println("cc_num: " + Cc_numString);
-		System.out.println("holder_name: " + Holder_nameString);
-		System.out.println("Expiry_Date: " + Expiry_Date);
+		System.out.println("Cc_num: " + Cc_num);
+		System.out.println("holder_name: " + Holder_name);
+		System.out.println("Expiry_Date string: " + Expiry_DateString);
 
 		CreditCardService creditcardService = new CreditCardService();
 
@@ -44,12 +44,12 @@ public class CreditCardCreateController extends HttpServlet {
 		Date Edate = null;
 
 		try {
-			Edate = formatter.parse(Expiry_Date);
+			Edate = formatter.parse(Expiry_DateString);
 			System.out.println(Edate);
 
 			CreditCard creditcard = new CreditCard();
-			creditcard.setCc_num(String.valueOf(Cc_numString));
-			creditcard.setHolder_name(String.valueOf(Holder_nameString));
+			creditcard.setCc_num(String.valueOf(Cc_num));
+			creditcard.setHolder_name(String.valueOf(Holder_name));
 			creditcard.setExpiry_date(Edate);
 			creditcardService.createCreditCard(creditcard);
 

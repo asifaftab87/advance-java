@@ -10,7 +10,7 @@ import java.util.List;
 
 import org.ecom.model.CreditCard;
 
-public class CreditCardRepository {
+public class CreditCardRepository { //DAO Data Access Object
 
 	public static List<CreditCard> getAllCreditCard(Connection con) {
 
@@ -60,33 +60,33 @@ public class CreditCardRepository {
 	}
 	
 	//find CreditCard By Cc_Id
-	public static List<CreditCard> findCreditCardByCc_Id(Connection con, long Cc_Id) {
+	public static CreditCard findCreditCardByCc_Id(Connection con, long creditcardcc_Id) {
 
-		System.out.println("-----------findCreditCardByCc_Id cc_id: " + Cc_Id);
+		System.out.println("-----------findCreditCardByCc_Id creditcardcc_id: " + creditcardcc_Id);
 
 		ResultSet rs = null;
-
-		List<CreditCard> CreditCardList = new ArrayList<>();
+		CreditCard creditcard = null;
 		PreparedStatement pStatement = null;
 
 		try {
 			String query = " select * from creditcard where cc_id=? ";
 			pStatement = con.prepareStatement(query);
-			pStatement.setLong(1, Cc_Id);
+			pStatement.setLong(1, creditcardcc_Id);
 			rs = pStatement.executeQuery();
 
 			if (rs != null) {
 
 				while (rs.next()) {
-					CreditCard creditcard = new CreditCard();
+					
+					 creditcard = new CreditCard();
 					creditcard.setCc_id(rs.getInt(1));
 					creditcard.setCc_num(rs.getString(2));
 					creditcard.setHolder_name(rs.getString(3));
 					creditcard.setExpiry_date(rs.getDate(4));
-					CreditCardList.add(creditcard);
 				}
 			}
-		} catch (Exception e) {
+		} 
+		catch (Exception e) {
 			e.printStackTrace();
 		} finally {
 			try {
@@ -104,7 +104,7 @@ public class CreditCardRepository {
 				e.printStackTrace();
 			}
 		}
-		return CreditCardList;
+		return creditcard;
 	}
 
 	// Create method of CreditCard
@@ -120,7 +120,8 @@ public class CreditCardRepository {
 			java.sql.Date sqlExpiry_date = new java.sql.Date(creditcard.getExpiry_date().getTime());
 			
 
-			String query = "INSERT INTO creditcard(cc_num, holder_name , expiry_date ) " + " VALUES (?,?, ?)";
+			String query = "INSERT INTO creditcard(cc_num, holder_name , expiry_date ) " 
+							+ " VALUES (?,?, ?)";
 			pStatement = con.prepareStatement(query);
 			pStatement.setString(1, creditcard.getCc_num());
 			pStatement.setString(2, creditcard.getHolder_name());
@@ -191,9 +192,9 @@ public class CreditCardRepository {
 	}
 	
 	//Delete CreditCard
-	public static int deleteCreditCardByCc_Id(Connection con, long Cc_Id) {
+	public static int deleteCreditCardByCc_Id(Connection con, long creditcardcc_Id) {
 
-		System.out.println("-----------deleteCreditCardByCc_Id cc_id: "+Cc_Id);
+		System.out.println("-----------deleteCreditCardByCc_Id creditcardcc_id: "+creditcardcc_Id);
 		
 		int executeUpdate = 0;
 		PreparedStatement pStatement = null;
@@ -201,7 +202,7 @@ public class CreditCardRepository {
 		try {
 			String query = "delete from creditcard where cc_id=?";
 			pStatement = con.prepareStatement(query);
-			pStatement.setLong(1, Cc_Id);
+			pStatement.setLong(1, creditcardcc_Id);
 			executeUpdate = pStatement.executeUpdate();
 			
 			if(executeUpdate>0) {

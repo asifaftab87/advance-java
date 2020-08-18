@@ -16,13 +16,13 @@ public class CreditCardDeleteController extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-		String Cc_IdStr = request.getParameter("Cc_Id");
-		System.out.println("Cc_IdStr: "+Cc_IdStr);
+		String creditcardcc_IdStr = request.getParameter("creditcardcc_Id");
+		System.out.println("creditcardcc_IdStr: "+creditcardcc_IdStr);
 		
 		CreditCardService creditcardService = new CreditCardService();
 		try {
-			long Cc_Id = Long.valueOf(Cc_IdStr);
-			creditcardService.deleteCreditCardByCc_Id(Cc_Id);
+			long creditcardcc_Id = Long.valueOf(creditcardcc_IdStr);
+			creditcardService.deleteCreditCardByCc_Id(creditcardcc_Id);
 		}
 		catch(Exception e) {
 			System.out.println(e.getMessage());

@@ -14,8 +14,10 @@ import org.ecom.model.CreditCard;
 import org.ecom.service.CreditCardService;
 
 public class CreditCardSearchController extends HttpServlet {
+	
 	private static final long serialVersionUID = 1L;
-
+	
+	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		String hname = request.getParameter("hname");
@@ -34,7 +36,7 @@ public class CreditCardSearchController extends HttpServlet {
 			System.out.println(e.getMessage());
 		}
 		
-		String destination = ProjectConstants.JSP_FOLDER_PATH + "employee-list.jsp";
+		String destination = ProjectConstants.JSP_FOLDER_PATH + "CreditCard-list.jsp";
 		RequestDispatcher requestDispatcher = request.getRequestDispatcher(destination);
 		
 		requestDispatcher.forward(request, response);

@@ -59,21 +59,21 @@
 				<th>Action</th>
 			</tr>
 			<%
-				List<CreditCard> CreditCardList = (List<CreditCard>)request.getAttribute("creditcardList");
-				if(!CreditCardList.isEmpty()){	
-					for(CreditCard creditcard : CreditCardList){
+				List<CreditCard> creditcardList = (List<CreditCard>)request.getAttribute("creditcardList");
+				if(!creditcardList.isEmpty()){	
+					for(CreditCard creditcard : creditcardList){
 				%>
 					<tr>
 						<td>
-							<a href="/asif-project1/CreditCard/Detail?Cc_Id=<%= creditcard.getCc_id() %>">
+							<a href="/asif-project1/CreditCard/Detail?creditcardcc_Id=<%= creditcard.getCc_id() %>">
 								<%= creditcard.getCc_num() %>
 							</a>
 						</td>
 						<td><%= creditcard.getHolder_name() %></td>
 						<td><%= creditcard.getExpiry_date() %></td>
 						<td>
-							<a href="/asif-project1/CreditCard/Delete?Cc_Id=<%= creditcard.getCc_id() %>">Delete</a>
-							<a href="/asif-project1/CreditCard/Update?Cc_Id=<%= creditcard.getCc_id() %>">Update</a>
+							<a href="/asif-project1/CreditCard/Delete?creditcardcc_Id=<%= creditcard.getCc_id() %>">Delete</a>
+							<a href="/asif-project1/CreditCard/Update?creditcardcc_Id=<%= creditcard.getCc_id() %>">Update</a>
 						</td>
 					</tr>
 				<%

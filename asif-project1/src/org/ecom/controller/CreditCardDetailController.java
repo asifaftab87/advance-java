@@ -11,9 +11,12 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.ecom.constant.ProjectConstants;
 import org.ecom.model.Address;
+import org.ecom.model.MoneyDetail;
+import org.ecom.model.User;
 import org.ecom.model.CreditCard;
 import org.ecom.service.AddressService;
-import org.ecom.service.CreditCardService;;
+import org.ecom.service.MoneyDetailService;
+import org.ecom.service.CreditCardService;
 
 public class CreditCardDetailController extends HttpServlet {
 	
@@ -22,22 +25,22 @@ public class CreditCardDetailController extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-		String Cc_IdStr = request.getParameter("Cc_Id");
+		String creditcardcc_IdStr = request.getParameter("creditcardcc_Id");
 		
-		System.out.println("CreditCard detail do get Cc_Id: "+Cc_IdStr);
+		System.out.println("CreditCard detail do get creditcardcc_Id: "+creditcardcc_IdStr);
 		
-		CreditCardService creditcardsevice = new CreditCardService();
+		CreditCardService creditcardservice = new CreditCardService();
 		
 		try {
-			long Cc_Id = Long.valueOf(Cc_IdStr);
-			List<CreditCard> creditcard = creditcardsevice.findCreditCardByCc_Id(Cc_Id);
+			long creditcardcc_Id = Long.valueOf(creditcardcc_IdStr);
+			CreditCard creditcard = creditcardservice.findCreditCardByCc_Id(creditcardcc_Id);
 			
 			if(creditcard!=null) {
 				
 				//pass value to jsp 
 				request.setAttribute("creditcard", creditcard);
 				AddressService addressService = new AddressService();
-				List<Address> addressList = addressService.findAddressByEmployeeId(Cc_Id);
+				List<Address> addressList = addressService.findAddressByEmployeeId(creditcardcc_Id);
 				request.setAttribute("addressList", addressList);
 			}
 				
@@ -46,16 +49,31 @@ public class CreditCardDetailController extends HttpServlet {
 		
 		catch(Exception e) {
 			System.out.println(e.getMessage());
+		}
 		
 		
-	}
+		try {
+			long creditcardcc_Id = Long.valueOf(creditcardcc_IdStr);
+			CreditCard creditcard = creditcardservice.findCreditCardByCc_Id(creditcardcc_Id);
+			
+			if(creditcard!=null) {
+				
+				//pass value to jsp 
+				request.setAttribute("creditcard", creditcard);
+				
+				MoneyDetailService moneydetService = new MoneyDetailService();
+				List<MoneyDetail> monetdetList = moneydetService.findMoneyDetailByUserId(creditcardcc_Id);
+				request.setAttribute("monetdetList", monetdetList);
+			}
+		}
+		catch(Exception e) {
+			System.out.println(e.getMessage());
+		}
 		
-		
-		String destination = ProjectConstants.JSP_FOLDER_PATH + "employee-detail.jsp";
+		String destination = ProjectConstants.JSP_FOLDER_PATH + "CreditCard-detail.jsp";
 		RequestDispatcher requestDispatcher = request.getRequestDispatcher(destination);
 		
 		requestDispatcher.forward(request, response); 
-	
 	}
-
+	
 }
