@@ -34,7 +34,7 @@
 		
 		<form action="/asif-project1/CreditCard/Update" method="post">
 		
-		  <input type="hidden" id="creditcardccc_id" name="creditcardccc_id" value="<%= creditcard.getCc_id() %>" />
+		  <input type="hidden" id="creditcardcc_id" name="creditcardcc_id" value="<%= creditcard.getCc_id() %>" />
 		  
 		  <label for="cc_num">Cc_Num:</label><br>
 		  <input type="text" id="cc_num" name="cc_num" value="<%= creditcard.getCc_num() %>" /><br><br>

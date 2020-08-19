@@ -62,7 +62,7 @@ public class CreditCardUpdateController extends HttpServlet {
 	
 		CreditCardService creditcardService = new CreditCardService();
 
-		SimpleDateFormat formatter = new SimpleDateFormat("MM/dd/yyyy");
+		SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
 
 		Date Edate = null;
 
@@ -75,16 +75,18 @@ public class CreditCardUpdateController extends HttpServlet {
 
 			CreditCard creditcard = new CreditCard();
 			creditcard.setCc_id(creditcardcc_Id);
-			creditcard.setCc_num(String.valueOf(Cc_num));
-			creditcard.setHolder_name(String.valueOf(Holder_name));
+			creditcard.setCc_num(Cc_num);
+			creditcard.setHolder_name(Holder_name);
 			creditcard.setExpiry_date(Edate);
 			creditcardService.updateCreditCard(creditcard);
 
-		} catch (ParseException e) {
-			e.printStackTrace();
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+		 } 
+		catch (ParseException e) {
+            e.printStackTrace();
+        }
+		catch (Exception e) {
+            e.printStackTrace();
+        }
 
 		creditcardService.connectionClose();
 
