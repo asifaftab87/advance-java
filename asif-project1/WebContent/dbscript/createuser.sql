@@ -39,5 +39,12 @@ create table credit_card(
 	expiry_date Date
 );
 
+create table employee(
+	id int(5) auto_increment primary key,
+	name varchar(45) not null,
+	age int(5),
+);	
+
+
 INSERT INTO db1.address (userid, street, city, state, country, pincode) VALUES (13, 'loha pool', 'kolkata', 'wb', 'india', '700019');
 
