@@ -33,10 +33,12 @@ public class EmployeeCreateController extends HttpServlet {
 
 		String name = request.getParameter("name");
 		String age = request.getParameter("age");
-	
+		String salary = request.getParameter("salary");
+
 		System.out.println("name: "+name);
 		System.out.println("age: "+age);
-	
+		System.out.println("salary: "+salary);
+
 	
 	
 	try {
@@ -45,6 +47,8 @@ public class EmployeeCreateController extends HttpServlet {
 			Employee employee = new Employee();
 			employee.setName(name);
 			employee.setAge(Integer.valueOf (age));
+			employee.setSalary(salary);
+
 			employeeService.createEmployee(employee);
 	 		
         } 

@@ -1,4 +1,4 @@
-package org.ecom.service;
+ package org.ecom.service;
 
 import java.sql.Connection;
 import java.util.ArrayList;
@@ -49,7 +49,6 @@ private Connection con = null;
 	public void createEmployee(Employee employee) {
 		EmployeeRepository.createEmployee(con, employee);
 	}
-	
 	
 	public void updateEmployee(Employee employee) {
 		EmployeeRepository.updateEmployee(con, employee);

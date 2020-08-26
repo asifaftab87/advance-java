@@ -55,34 +55,37 @@ public class EmployeeUpdateController extends HttpServlet {
 		
 		String name = request.getParameter("name");
 		String age = request.getParameter("age");
+		String salary = request.getParameter("salary");
 		
 		
 		System.out.println("name: "+name);
 		System.out.println("age: "+age);
+		System.out.println("salary: "+salary);
+
 	
-		
-		
-		
+		EmployeeService employeeService = new EmployeeService();
+
 		try {
 			
 			int employeeId = Integer.valueOf(employeeIdStr);
 			
-			EmployeeService employeeService = new EmployeeService();
 
 			Employee employee = new Employee();
 
 			employee.setId(employeeId);
 			employee.setName(name);
 			employee.setAge(Integer.valueOf (age));
-	 		
+			employee.setSalary(salary);
+
 	 		employeeService.updateEmployee(employee);
      
-        }
+		} 
 		catch (Exception e) {
             e.printStackTrace();
         }
 		
-		
+		employeeService.connectionClose();
+
 		//to avoid form submission
 		response.sendRedirect("/asif-project1/employeeController/list");  
 	}

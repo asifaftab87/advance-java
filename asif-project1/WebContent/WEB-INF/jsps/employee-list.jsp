@@ -55,6 +55,8 @@
 			<tr>
 				<th>Name</th>
 				<th>Age</th>
+				<th>Salary</th>
+				
 				<th>Action</th>
 			</tr>
 			<%
@@ -69,6 +71,8 @@
 							</a>
 						</td>
 						<td><%= employee.getAge() %></td>
+						<td><%= employee.getSalary() %></td>
+						
 						<td>
 							<a href="/asif-project1/employeeDeleteController/delete?employeeId=<%= employee.getId() %>">Delete</a>
 							<a href="/asif-project1/employeeUpdateController/update?employeeId=<%= employee.getId() %>">Update</a>

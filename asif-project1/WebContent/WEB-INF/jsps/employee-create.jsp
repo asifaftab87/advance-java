@@ -22,18 +22,56 @@
 		</div>
 		
 		<h1>Add Employee</h1>
-		<form action="/asif-project1/employeeCreateController/add" method="post">
+		<form action="/asif-project1/employeeCreateController/add" method="post"  id="userForm">
 		  <label for="name">Employee Name:</label><br>
 		  <input type="text" id="name" name="name"><br>
 		  
 		  <label for="age">Employee Age:</label><br>
-		  <input type="text" id="age" name="age"><br>
-		  
-		
-		  
-		  <input type="submit" value="Submit">
+		  <input type="text" id="age" name="age"><br><br>
+		    
+		   <label for="salary"> Salary: </label>
+		   <select id="salary" name="salary" onchange="changeSalary();">
+		   		<option value="-1">Please Select</option>
+		   		<option value="$1000">$1000</option>
+		   		<option value="$2000">$2000</option>
+		   		<option value="$3000">$3000</option>
+		   		<option value="$4000">$4000</option>
+		   </select>
+		   <br><br>
+		   
+		  <input type="button" value="Submit" onclick="submitForm();">
 		</form> 
-  </body>
-  
-  
+		
+		
+		<script type="text/javascript">
+			function submitForm(){
+				console.log('print in browser console');
+				
+				var name = document.getElementById("name").value;
+				if(name.length==0){
+					alert('Please provide Employee Name');
+					return false;
+				}
+				
+				var age = document.getElementById("age").value;
+				if(age.length==0){
+					alert('Please provide Employee Age');
+					return false;
+				}
+				
+				var salaryValue = document.getElementById("salary").value;
+				if(salaryValue==-1){
+					alert('Please select salary from drop down');
+					return false;
+				}
+				
+				document.getElementById("userForm").submit();
+		}
+			
+			function changeSalary(){
+				var val = document.getElementById('salary').value;	
+				console.log('salary change : '+val);
+			}
+		  </script>
+      </body>
   </html>

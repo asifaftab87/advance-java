@@ -47,6 +47,18 @@
 		  <label for="age">Employee Age:</label><br>
 		  <input type="text" id="age" name="age" value="<%= employee.getAge() %>" readonly="readonly" /><br><br>
 		  
+		  <label for="salary"> Salary: </label>
+		   <select id="salary" name="salary" onchange="changeSalary();">
+		   		<option value="-1">Please Select</option>
+		   		<option value="$1000">$1000</option>
+		   		<option value="$2000">$2000</option>
+		   		<option value="$3000">$3000</option>
+		   		<option value="$4000">$4000</option>
+		   </select>
+		   <br><br><br><br><br><br>
+				  <input type="Submit" value="Submit">
+		
+		   <br><br>
 		  <br>
 		  <br>
 		  <h1>Addresses Detail</h1>

@@ -37,7 +37,23 @@
 		  <input type="text" id="age" name="age" value="<%= employee.getAge() %>" /><br><br>
 		  
 		 
+		  
+		 <label for="salary"> Salary: </label>
+		   <select id="salary" name="salary">
+		   		<option value="-1">Please Select</option>
+		   		<option value="$1000">$1000</option>
+		   		<option value="$2000">$2000</option>
+		   		<option value="$3000">$3000</option>
+		   		<option value="$4000">$4000</option>
+		   </select>
+		   
+		   <br><br>
+		   
 		  <input type="submit" value="Submit">
 		</form> 
+	
+	
+		  
+		  
 	</body>
 </html>

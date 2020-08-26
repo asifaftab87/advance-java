@@ -33,7 +33,8 @@ public class EmployeeRepository {
 					employee.setId(rs.getInt(1));
 					employee.setName(rs.getString(2));
 					employee.setAge(rs.getInt(3));
-					
+					employee.setSalary(rs.getString(4));
+
 					employeeList.add(employee);
 				}
 				
@@ -85,7 +86,8 @@ public class EmployeeRepository {
 					employee.setId(rs.getInt(1));
 					employee.setName(rs.getString(2));
 					employee.setAge(rs.getInt(3));
-					
+					employee.setSalary(rs.getString(4));
+
 				}
 			}
 		} 
@@ -124,12 +126,13 @@ public class EmployeeRepository {
 			//conversion from java.util.Date to java.sql.Date
 			//java.sql.Date sqlDate = new java.sql.Date(employee.getDob().getTime());
 			
-			String query = 	  "INSERT INTO employee(name, age) "
-							+ " VALUES (?, ?)";
+			String query = 	  "INSERT INTO employee(name, age, salary) "
+							+ " VALUES (?, ?, ?)";
 			pStatement = con.prepareStatement(query);
 			pStatement.setString(1, employee.getName());
 			pStatement.setInt(2, employee.getAge());
-			
+			pStatement.setString(3, employee.getSalary());
+
 			int executeUpdate = pStatement.executeUpdate();
 			
 			if(executeUpdate>0) {
@@ -167,12 +170,13 @@ public class EmployeeRepository {
 			//conversion from java.util.Date to java.sql.Date
 		//	java.sql.Date sqlDate = new java.sql.Date(employee.getDob().getTime());
 			
-			String query = 	  " update employee set name=?, age=? "
+			String query = 	  " update employee set name=?, age=? , salary=?"
 							+ " where id=? ";
 			pStatement = con.prepareStatement(query);
 			pStatement.setString(1, employee.getName());
 			pStatement.setInt(2, employee.getAge());
-			
+			pStatement.setString(3, employee.getSalary());
+
 			int executeUpdate = pStatement.executeUpdate();
 			
 			if(executeUpdate>0) {
@@ -255,7 +259,8 @@ public class EmployeeRepository {
 				employee.setId(rs.getInt(1));
 				employee.setName(rs.getString(2));
 				employee.setAge(rs.getInt(3));
-			
+				employee.setSalary(rs.getString(4));
+
 				employeeList.add(employee);
 			}
 		}
