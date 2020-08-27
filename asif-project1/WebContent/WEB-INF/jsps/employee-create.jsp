@@ -24,10 +24,10 @@
 		<h1>Add Employee</h1>
 		<form action="/asif-project1/employeeCreateController/add" method="post"  id="userForm">
 		  <label for="name">Employee Name:</label><br>
-		  <input type="text" id="name" name="name"><br>
+		  <input type="text" id="name" name="name" onmouseover="testing();"><br>
 		  
 		  <label for="age">Employee Age:</label><br>
-		  <input type="text" id="age" name="age"><br><br>
+		  <input type="text" id="age" name="age" onmouseover="testing();"><br><br>
 		    
 		   <label for="salary"> Salary: </label>
 		   <select id="salary" name="salary" onchange="changeSalary();">
@@ -44,6 +44,10 @@
 		
 		
 		<script type="text/javascript">
+		
+			function testing(){
+				alert("on mouse over this element");
+			}
 			function submitForm(){
 				console.log('print in browser console');
 				

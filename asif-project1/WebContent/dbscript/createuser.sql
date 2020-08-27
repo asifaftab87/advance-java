@@ -43,6 +43,7 @@ create table employee(
 	id int(5) auto_increment primary key,
 	name varchar(45) not null,
 	age int(5),
+	salary varchar(45)
 );	
 
 
