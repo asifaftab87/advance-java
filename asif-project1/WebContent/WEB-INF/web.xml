@@ -29,7 +29,7 @@
 		<servlet-name>employeeServlet</servlet-name>
 		<url-pattern>/employeeController/list</url-pattern>
 	</servlet-mapping>
-	
+
 	<servlet>
 		<servlet-name>CreditCardServlet</servlet-name>
 		<servlet-class>org.ecom.controller.CreditCardController</servlet-class>
@@ -60,7 +60,7 @@
 		<servlet-name>employeeDeleteServlet</servlet-name>
 		<url-pattern>/employeeDeleteController/delete</url-pattern>
 	</servlet-mapping>
-	
+
 	<servlet>
 		<servlet-name>CreditCardDeleteServlet</servlet-name>
 		<servlet-class>org.ecom.controller.CreditCardDeleteController</servlet-class>
@@ -175,7 +175,7 @@
 		<servlet-name>employeeDetailServlet</servlet-name>
 		<url-pattern>/employeeDetailController/detail</url-pattern>
 	</servlet-mapping>
-	
+
 	<servlet>
 		<servlet-name>CreditCardDetailServlet</servlet-name>
 		<servlet-class>org.ecom.controller.CreditCardDetailController</servlet-class>
@@ -225,7 +225,7 @@
 		<servlet-name>employeeSearchServlet</servlet-name>
 		<url-pattern>/employeeSearchController/search</url-pattern>
 	</servlet-mapping>
-	
+
 	<servlet>
 		<servlet-name>CreditCardSearchServlet</servlet-name>
 		<servlet-class>org.ecom.controller.CreditCardSearchController</servlet-class>
@@ -235,4 +235,118 @@
 		<servlet-name>CreditCardSearchServlet</servlet-name>
 		<url-pattern>/CreditCard/Search</url-pattern>
 	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>EmpFiveServlet</servlet-name>
+		<servlet-class>org.ecom.controller.EmployeefiveController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>EmpFiveServlet</servlet-name>
+		<url-pattern>/Employeefive/list</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>detailEmpFiveServlet</servlet-name>
+		<servlet-class>org.ecom.controller.EmployeefiveDetailController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>detailEmpFiveServlet</servlet-name>
+		<url-pattern>/Employeefive/detail</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+		<servlet-name>EmpFiveSearchServlet</servlet-name>
+		<servlet-class>org.ecom.controller.EmployeefiveSearchController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>EmpFiveSearchServlet</servlet-name>
+		<url-pattern>/Employeefive/search</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>EmpFiveUpdateServlet</servlet-name>
+		<servlet-class>org.ecom.controller.EmployeefiveUpdateController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>EmpFiveUpdateServlet</servlet-name>
+		<url-pattern>/Employeefive/update</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>EmpFiveCreateServlet</servlet-name>
+		<servlet-class>org.ecom.controller.EmployeefiveCreateController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>EmpFiveCreateServlet</servlet-name>
+		<url-pattern>/Employeefive/add</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>EmpFiveSearchAgeServlet</servlet-name>
+		<servlet-class>org.ecom.controller.EmployeefiveSearchByAgeController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>EmpFiveSearchAgeServlet</servlet-name>
+		<url-pattern>/Employeefive/searchAge</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>EmpFiveSearchJoinedServlet</servlet-name>
+		<servlet-class>org.ecom.controller.EmployeefiveSearchByJoinedController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>EmpFiveSearchJoinedServlet</servlet-name>
+		<url-pattern>/Employeefive/searchJoined</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+		<servlet-name>EmpFiveSearchReleaseServlet</servlet-name>
+		<servlet-class>org.ecom.controller.EmployeefiveSearchByReleaseController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>EmpFiveSearchReleaseServlet</servlet-name>
+		<url-pattern>/Employeefive/searchRelease</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>EmpFiveSearchEmailServlet</servlet-name>
+		<servlet-class>org.ecom.controller.EmployeefiveSearchByEmailIdController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>EmpFiveSearchEmailServlet</servlet-name>
+		<url-pattern>/Employeefive/searchEmail</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>EmpFiveSearchPeriodServlet</servlet-name>
+		<servlet-class>org.ecom.controller.EmployeefiveSearchByNotPeriodController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>EmpFiveSearchPeriodServlet</servlet-name>
+		<url-pattern>/Employeefive/searchPeriod</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>EmpFiveSearchGenderServlet</servlet-name>
+		<servlet-class>org.ecom.controller.EmployeefiveSearchByGenderController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>EmpFiveSearchGenderServlet</servlet-name>
+		<url-pattern>/Employeefive/searchGender</url-pattern>
+	</servlet-mapping>
+
+
 </web-app>
