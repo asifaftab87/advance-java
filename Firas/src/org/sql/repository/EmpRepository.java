@@ -182,7 +182,7 @@ public class EmpRepository {
 		return empList;
 	}
 	
-	public static List<Employee> findByAge(Date fromDobDate, Date toDobDate){
+	public static List<Employee> findByDob(Date fromDobDate, Date toDobDate){
 		
 		if(con==null) {
 			return null;
@@ -240,7 +240,7 @@ public class EmpRepository {
 		ResultSet rs = null;
 		List<Employee> empList = new ArrayList<>();
 		try {
-			String query = "SELECT * FROM employee WHERE joinedDate=? BETWEEN ? AND ?";
+			String query = "SELECT * FROM employee WHERE joinedDate BETWEEN ? AND ?";
 			pStatement = con.prepareStatement(query);
 			pStatement.setDate(1, fromJoinedDate);
 			pStatement.setDate(2, toJoinedDate);
@@ -285,13 +285,16 @@ public class EmpRepository {
 		if(con==null) {
 			return null;
 		}
-		Statement stmt = null;
+		PreparedStatement pStmt = null;
 		ResultSet rs = null;
-		
 		List<Employee> empList = new ArrayList<>();
 		try {
-			stmt = con.createStatement();
-			rs = stmt.executeQuery("SELECT * FROM employee WHERE release_date=");
+			String query = "SELECT * FROM employee WHERE joinedDate BETWEEN ? AND ?";
+			pStmt = con.prepareStatement(query);
+			pStmt.setDate(1, fromReleaseDate);
+			pStmt.setDate(2, toReleaseDate);
+			
+			rs = pStmt.executeQuery();
 			while(rs.next()) {
 				Employee emp = new Employee();
 				emp.setId(rs.getInt(1));
@@ -303,14 +306,14 @@ public class EmpRepository {
 				emp.setReleaseDate(rs.getDate(7));
 				emp.setNoticePeriod(rs.getInt(8));
 				emp.setCreateDate(rs.getDate(9));
-				emp.setUpdateDate(rs.getDate(10));
+				empList.add(emp);
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} finally {
 			try {
-				if (stmt != null) {
-					stmt.close();
+				if (pStmt != null) {
+					pStmt.close();
 				}
 			} catch (SQLException e) {
 				e.printStackTrace();
@@ -326,20 +329,23 @@ public class EmpRepository {
 		return empList;
 	}
 	
-	public static List<Employee> findByEmailId(String emailId){
+	public static Employee findByEmailId(String emailId){
 		
 		if(con==null) {
 			return null;
 		}
-		Statement stmt = null;
 		ResultSet rs = null;
-		
-		List<Employee> empList = new ArrayList<>();
+		PreparedStatement pStmt = null;
+		Employee emp = new Employee();
+
 		try {
-			stmt = con.createStatement();
-			rs = stmt.executeQuery("SELECT * FROM employee WHERE emailid=");
-			while(rs.next()) {
-				Employee emp = new Employee();
+			String query = "SELECT * FROM employee WHERE emailId=?";
+			pStmt = con.prepareStatement(query);
+			pStmt.setString(1, emailId);
+			
+			rs = pStmt.executeQuery();
+			
+			if(rs.next()) {
 				emp.setId(rs.getInt(1));
 				emp.setName(rs.getString(2));
 				emp.setDob(rs.getDate(3));
@@ -355,8 +361,8 @@ public class EmpRepository {
 			e.printStackTrace();
 		} finally {
 			try {
-				if (stmt != null) {
-					stmt.close();
+				if (pStmt != null) {
+					pStmt.close();
 				}
 			} catch (SQLException e) {
 				e.printStackTrace();
@@ -369,7 +375,7 @@ public class EmpRepository {
 				e.printStackTrace();
 			}
 		}
-		return empList;
+		return emp;
 	}
 	
 	public static List<Employee> findByNoticePeriod(int noticePeriod){
@@ -377,13 +383,17 @@ public class EmpRepository {
 		if(con==null) {
 			return null;
 		}
-		Statement stmt = null;
+		PreparedStatement pStmt = null;
 		ResultSet rs = null;
 		
 		List<Employee> empList = new ArrayList<>();
+		
 		try {
-			stmt = con.createStatement();
-			rs = stmt.executeQuery("SELECT * FROM employee WHERE notice_period=");
+			String query = "SELECT * FROM employee WHERE noticePeriod=?";
+			pStmt = con.prepareStatement(query);
+			pStmt.setInt(1, noticePeriod);
+			
+			rs = pStmt.executeQuery();
 			while(rs.next()) {
 				Employee emp = new Employee();
 				emp.setId(rs.getInt(1));
@@ -396,13 +406,15 @@ public class EmpRepository {
 				emp.setNoticePeriod(rs.getInt(8));
 				emp.setCreateDate(rs.getDate(9));
 				emp.setUpdateDate(rs.getDate(10));
-			}
-		} catch (SQLException e) {
+				empList.add(emp);
+			}	
+		}
+		catch (SQLException e) {
 			e.printStackTrace();
 		} finally {
 			try {
-				if (stmt != null) {
-					stmt.close();
+				if (pStmt != null) {
+					pStmt.close();
 				}
 			} catch (SQLException e) {
 				e.printStackTrace();
@@ -423,13 +435,17 @@ public class EmpRepository {
 		if(con==null) {
 			return null;
 		}
-		Statement stmt = null;
+		PreparedStatement pStmt = null;
 		ResultSet rs = null;
 		
 		List<Employee> empList = new ArrayList<>();
+		
 		try {
-			stmt = con.createStatement();
-			rs = stmt.executeQuery("SELECT * FROM employee WHERE gender=");
+			String query = "SELECT * FROM employee WHERE gender=?";
+			pStmt = con.prepareStatement(query);
+			pStmt.setString(1, gender);
+			
+			rs = pStmt.executeQuery();
 			while(rs.next()) {
 				Employee emp = new Employee();
 				emp.setId(rs.getInt(1));
@@ -442,13 +458,14 @@ public class EmpRepository {
 				emp.setNoticePeriod(rs.getInt(8));
 				emp.setCreateDate(rs.getDate(9));
 				emp.setUpdateDate(rs.getDate(10));
-			}
+				empList.add(emp);
+			}	
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} finally {
 			try {
-				if (stmt != null) {
-					stmt.close();
+				if (pStmt != null) {
+					pStmt.close();
 				}
 			} catch (SQLException e) {
 				e.printStackTrace();
@@ -467,7 +484,7 @@ public class EmpRepository {
 	public static void create(Employee employee) {
 		PreparedStatement pStmt = null;
 		try {
-			String sql = "INSERT INTO employee VALUES(?,?,?,?,?,?,?,?,?,?, ?)";
+			String sql = "INSERT INTO employee VALUES(?,?,?,?,?,?,?,?,?,?)";
 			pStmt = con.prepareStatement(sql);
 			pStmt.setInt(1, employee.getId());
 			pStmt.setString(2, employee.getName());
@@ -479,8 +496,6 @@ public class EmpRepository {
 			pStmt.setInt(8, employee.getNoticePeriod());
 			pStmt.setDate(9, employee.getCreateDate());
 			pStmt.setDate(10, employee.getUpdateDate());
-			pStmt.setInt(11, employee.getAge());
-			
 			
 			int executeUpdate = pStmt.executeUpdate();
 			if(executeUpdate > 0) {
@@ -511,7 +526,7 @@ public class EmpRepository {
 		Statement stmt = null;
 		try {
 			stmt = con.createStatement();
-			String query = "UPDATE employee SET WHERE";
+			String query = "UPDATE employee SET name='Farhan' WHERE emailId='nabila80@mail.com'";
 			int executeUpdate = stmt.executeUpdate(query);
 
 			if (executeUpdate > 0) {

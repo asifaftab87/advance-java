@@ -19,8 +19,8 @@ public class EmpService {
 		List<Employee> empList = EmpRepository.findAll();
 		for(Employee emp : empList) {
 			Date dob = emp.getDob();
-			int age = getAgeFromDate(dob);
-			emp.setAge(age);
+			//int age = getAgeFromDate(dob);
+			//emp.setAge(age);
 		}
 		return empList;
 	}
@@ -33,26 +33,29 @@ public class EmpService {
 		return EmpRepository.findById(id);
 	}
 	
-	public List<Employee> findByAge(Date fromDobDate, Date toDobDate){
-		return EmpRepository.findByAge(fromDobDate, toDobDate);
+	public Employee findByEmailId(String emailId) {
+		return EmpRepository.findByEmailId(emailId);
+	}
+	public List<Employee> findByDob(Date fromDobDate, Date toDobDate){
+		return EmpRepository.findByDob(fromDobDate, toDobDate);
 	}
 	
-	public static int getAgeFromDate(Date dob) {
-		
-		Calendar calendar = new GregorianCalendar();
-		calendar.setTime(dob);
-		
-		int year = calendar.get(Calendar.YEAR);
-		//Add one to month {0 - 11}
-		int month = calendar.get(Calendar.MONTH) + 1;
-		int day = calendar.get(Calendar.DAY_OF_MONTH);
-		//convert date to age
-		LocalDate birth = LocalDate.of(year, month, day);
-		LocalDate current = LocalDate.now();
-		
-		int age = Period.between(birth, current).getYears();
-		return age;
+	public List<Employee> findByJoinedDate(Date fromJoinedDate, Date toJoinedDate){
+		return EmpRepository.findByJoinedDate(fromJoinedDate, toJoinedDate);
 	}
+	
+	public List<Employee> findByReleaseDate(Date fromReleaseDate, Date toReleaseDate){
+		return EmpRepository.findByReleaseDate(fromReleaseDate, toReleaseDate);
+	}
+	
+	public List<Employee> findByNoticePeriod(int noticePeriod){
+		return EmpRepository.findByNoticePeriod(noticePeriod);
+	}
+	
+	public List<Employee> findByGender(String gender){
+		return EmpRepository.findByGender(gender);
+	}
+	
 	
 	public void create(Employee employee) {
 		
@@ -61,5 +64,8 @@ public class EmpService {
 	
 	public static void update() {
 		EmpRepository.update();
+		Employee employee = new Employee();
+		employee.setCreateDate(new Date(new java.util.Date().getTime()));
+		employee.setUpdateDate(new Date(new java.util.Date().getTime()));
 	}
 }
