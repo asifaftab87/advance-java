@@ -39,6 +39,16 @@
 		<servlet-name>CreditCardServlet</servlet-name>
 		<url-pattern>/CreditCard/list</url-pattern>
 	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>EmployeeTwoServlet</servlet-name>
+		<servlet-class>org.ecom.controller.EmployeeTwoController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>EmployeeTwoServlet</servlet-name>
+		<url-pattern>/EmployeeTwo/list</url-pattern>
+	</servlet-mapping>
 
 
 	<servlet>
@@ -69,6 +79,16 @@
 	<servlet-mapping>
 		<servlet-name>CreditCardDeleteServlet</servlet-name>
 		<url-pattern>/CreditCard/Delete</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>EmployeeTwoDeleteServlet</servlet-name>
+		<servlet-class>org.ecom.controller.EmployeeTwoDeleteController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>EmployeeTwoDeleteServlet</servlet-name>
+		<url-pattern>/EmployeeTwo/Delete</url-pattern>
 	</servlet-mapping>
 
 
@@ -103,6 +123,16 @@
 		<servlet-name>CreditCardCreateServlet</servlet-name>
 		<url-pattern>/CreditCard/add</url-pattern>
 	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>EmployeeTwoCreateServlet</servlet-name>
+		<servlet-class>org.ecom.controller.EmployeeTwoCreateController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>EmployeeTwoCreateServlet</servlet-name>
+		<url-pattern>/EmployeeTwo/add</url-pattern>
+	</servlet-mapping>
 
 	<servlet>
 		<servlet-name>updateServlet</servlet-name>
@@ -133,6 +163,16 @@
 	<servlet-mapping>
 		<servlet-name>CreditCardUpdateServlet</servlet-name>
 		<url-pattern>/CreditCard/Update</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>EmployeeTwoUpdateServlet</servlet-name>
+		<servlet-class>org.ecom.controller.EmployeeTwoUpdateController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>EmployeeTwoUpdateServlet</servlet-name>
+		<url-pattern>/EmployeeTwo/Update</url-pattern>
 	</servlet-mapping>
 
 	<servlet>
@@ -185,6 +225,16 @@
 		<servlet-name>CreditCardDetailServlet</servlet-name>
 		<url-pattern>/CreditCard/Detail</url-pattern>
 	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>EmployeeTwoDetailServlet</servlet-name>
+		<servlet-class>org.ecom.controller.EmployeeTwoDetailController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>EmployeeTwoDetailServlet</servlet-name>
+		<url-pattern>/EmployeeTwo/Detail</url-pattern>
+	</servlet-mapping>
 
 	<servlet>
 		<servlet-name>createmoneyServlet</servlet-name>
@@ -234,6 +284,76 @@
 	<servlet-mapping>
 		<servlet-name>CreditCardSearchServlet</servlet-name>
 		<url-pattern>/CreditCard/Search</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>EmployeeTwoSearchServlet</servlet-name>
+		<servlet-class>org.ecom.controller.EmployeeTwoNameController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>EmployeeTwoSearchServlet</servlet-name>
+		<url-pattern>/EmployeeTwo/Name</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>EmployeeTwoDobServlet</servlet-name>
+		<servlet-class>org.ecom.controller.EmployeeTwoDobController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>EmployeeTwoDobServlet</servlet-name>
+		<url-pattern>/EmployeeTwo/Dob</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>EmployeeTwoEmailServlet</servlet-name>
+		<servlet-class>org.ecom.controller.EmployeeTwoEmailController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>EmployeeTwoEmailServlet</servlet-name>
+		<url-pattern>/EmployeeTwo/Email</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>EmployeeTwoGenderServlet</servlet-name>
+		<servlet-class>org.ecom.controller.EmployeeTwoGenderController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>EmployeeTwoGenderServlet</servlet-name>
+		<url-pattern>/EmployeeTwo/Gender</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>EmployeeTwoJoinedDateServlet</servlet-name>
+		<servlet-class>org.ecom.controller.EmployeeTwoJoinedDateController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>EmployeeTwoJoinedDateServlet</servlet-name>
+		<url-pattern>/EmployeeTwo/JoinedDate</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>EmployeeTwoReleaseDateServlet</servlet-name>
+		<servlet-class>org.ecom.controller.EmployeeTwoReleaseDateController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>EmployeeTwoReleaseDateServlet</servlet-name>
+		<url-pattern>/EmployeeTwo/ReleaseDate</url-pattern>
+	</servlet-mapping>
+	
+		<servlet>
+		<servlet-name>EmployeeTwoNoticeperiodServlet</servlet-name>
+		<servlet-class>org.ecom.controller.EmployeeTwoNoticeperiodController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>EmployeeTwoNoticeperiodServlet</servlet-name>
+		<url-pattern>/EmployeeTwo/Noticeperiod</url-pattern>
 	</servlet-mapping>
 
 	<servlet>

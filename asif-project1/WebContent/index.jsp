@@ -17,6 +17,7 @@
 		<h2><a href="MoneyDetail/list">MoneyDetail</a></h2>
 		<h2><a href="CreditCard/list">CreditCard</a></h2>
 		<h2><a href="Employeefive/list">Employeefive</a></h2>
+		<h2><a href="EmployeeTwo/list">EmployeeTwo</a></h2>
 		<div>
 			<button type="button" onclick="message();"> Click here </button>
 		</div>
