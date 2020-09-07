@@ -46,6 +46,18 @@ create table employee(
 	salary varchar(45)
 );	
 
+create table employeeone(
+	  id int  auto_increment primary key ,
+	  name varchar(45)  not null,
+	  dob DATE,
+	  emailid varchar(45)  not null,
+	  gender tinyint(1)   ,
+	  joined_date DATE ,
+	  release_date DATE ,
+	  notice_period int,
+	  create_date TIMESTAMP,
+	  update_date TIMESTAMP
+);
 
 INSERT INTO db1.address (userid, street, city, state, country, pincode) VALUES (13, 'loha pool', 'kolkata', 'wb', 'india', '700019');
 

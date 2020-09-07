@@ -19,7 +19,6 @@
 		<url-pattern>/user/list</url-pattern>
 	</servlet-mapping>
 
-
 	<servlet>
 		<servlet-name>employeeServlet</servlet-name>
 		<servlet-class>org.ecom.controller.EmployeeController</servlet-class>
@@ -30,6 +29,16 @@
 		<url-pattern>/employeeController/list</url-pattern>
 	</servlet-mapping>
 	
+	
+	<servlet>
+		<servlet-name>employeeOneServlet</servlet-name>
+		<servlet-class>org.ecom.controller.EmployeeOneController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>employeeOneServlet</servlet-name>
+		<url-pattern>/employeeOneController/list</url-pattern>
+	</servlet-mapping>
 	<servlet>
 		<servlet-name>CreditCardServlet</servlet-name>
 		<servlet-class>org.ecom.controller.CreditCardController</servlet-class>
@@ -92,6 +101,27 @@
 	<servlet-mapping>
 		<servlet-name>employeeCreateServlet</servlet-name>
 		<url-pattern>/employeeCreateController/add</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>employeeOneCreateServlet</servlet-name>
+		<servlet-class>org.ecom.controller.EmployeeOneCreateController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>employeeOneCreateServlet</servlet-name>
+		<url-pattern>/employeeOneCreateController/add</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>employeeOneUpdateServlet</servlet-name>
+		<servlet-class>org.ecom.controller.EmployeeOneUpdateController</servlet-class>
+	</servlet>
+
+
+	<servlet-mapping>
+		<servlet-name>employeeOneUpdateServlet</servlet-name>
+		<url-pattern>/employeeOneUpdateController/update</url-pattern>
 	</servlet-mapping>
 
 	<servlet>
@@ -216,15 +246,6 @@
 		<url-pattern>/user/search</url-pattern>
 	</servlet-mapping>
 
-	<servlet>
-		<servlet-name>employeeSearchServlet</servlet-name>
-		<servlet-class>org.ecom.controller.EmployeeSearchController</servlet-class>
-	</servlet>
-
-	<servlet-mapping>
-		<servlet-name>employeeSearchServlet</servlet-name>
-		<url-pattern>/employeeSearchController/search</url-pattern>
-	</servlet-mapping>
 	
 	<servlet>
 		<servlet-name>CreditCardSearchServlet</servlet-name>
@@ -235,4 +256,107 @@
 		<servlet-name>CreditCardSearchServlet</servlet-name>
 		<url-pattern>/CreditCard/Search</url-pattern>
 	</servlet-mapping>
+	
+		<servlet>
+		<servlet-name>employeeSearchAgeServlet</servlet-name>
+		<servlet-class>org.ecom.controller.EmployeeSearchAgeController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>employeeSearchAgeServlet</servlet-name>
+		<url-pattern>/employeeSearchAgeController/searchage</url-pattern>
+	</servlet-mapping>
+	
+	
+	<servlet>
+		<servlet-name>employeeSearchServlet</servlet-name>
+		<servlet-class>org.ecom.controller.EmployeeSearchController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>employeeSearchServlet</servlet-name>
+		<url-pattern>/employeeSearchController/search</url-pattern>
+	</servlet-mapping>
+	
+	
+	<servlet>
+		<servlet-name>employeeOneSearchServlet</servlet-name>
+		<servlet-class>org.ecom.controller.EmployeeOneSearchController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>employeeOneSearchServlet</servlet-name>
+		<url-pattern>/employeeOneSearchController/search</url-pattern>
+	</servlet-mapping>
+	
+	
+	<servlet>
+		<servlet-name>employeeOneSearchDobServlet</servlet-name>
+		<servlet-class>org.ecom.controller.EmployeeOneSearchDobController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>employeeOneSearchDobServlet</servlet-name>
+		<url-pattern>/employeeOneSearchDobController/searchdob</url-pattern>
+	</servlet-mapping>
+	
+
+	<servlet>
+		<servlet-name>employeeOneSearchJoinServlet</servlet-name>
+		<servlet-class>org.ecom.controller.EmployeeOneSearchJoinController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>employeeOneSearchJoinServlet</servlet-name>
+		<url-pattern>/employeeOneSearchJoinController/searchjoin</url-pattern>
+	</servlet-mapping>
+	
+	
+	<servlet>
+		<servlet-name>employeeOneSearchRelServlet</servlet-name>
+		<servlet-class>org.ecom.controller.EmployeeOneSearchRelController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>employeeOneSearchRelServlet</servlet-name>
+		<url-pattern>/employeeOneSearchRelController/searchrel</url-pattern>
+	</servlet-mapping>
+	
+	
+	
+	<servlet>
+		<servlet-name>employeeOneSearchEmailServlet</servlet-name>
+		<servlet-class>org.ecom.controller.EmployeeOneSearchEmailController</servlet-class>
+	</servlet>
+
+
+	<servlet-mapping>
+		<servlet-name>employeeOneSearchEmailServlet</servlet-name>
+		<url-pattern>/employeeOneSearchEmailController/searchemail</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>employeeOneSearchGenderServlet</servlet-name>
+		<servlet-class>org.ecom.controller.EmployeeOneSearchGenderController</servlet-class>
+	</servlet>
+
+
+	<servlet-mapping>
+		<servlet-name>employeeOneSearchGenderServlet</servlet-name>
+		<url-pattern>/employeeOneSearchGenderController/searchgender</url-pattern>
+	</servlet-mapping>
+	
+	
+	<servlet>
+		<servlet-name>employeeOneSearchNoticePeriodServlet</servlet-name>
+		<servlet-class>org.ecom.controller.EmployeeOneSearchNoticePeriodController</servlet-class>
+	</servlet>
+
+
+	<servlet-mapping>
+		<servlet-name>employeeOneSearchNoticePeriodServlet</servlet-name>
+		<url-pattern>/employeeOneSearchNoticePeriodController/searchnoticeperiod</url-pattern>
+	</servlet-mapping>
+	
+	
 </web-app>
