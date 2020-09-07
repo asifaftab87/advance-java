@@ -32,6 +32,19 @@ create table MoneyDetail(
 	updatedate DATE
 );
 
+create table employeetwo(
+	id int(5) auto_increment primary key,
+	name varchar(50) not null,
+	dob DATE,
+	email varchar(50) not null,
+	gender tinyint(1),
+    joined_date DATE,
+	release_date DATE,
+    notice_period int(10),
+    create_date timestamp,
+	update_date timestamp
+);
+
 create table credit_card(
 	cc_id int(5) auto_increment primary key,
 	cc_num varchar(100) not null,
@@ -58,6 +71,20 @@ create table employeeone(
 	  create_date TIMESTAMP,
 	  update_date TIMESTAMP
 );
+
+create table employeefive(
+	id int(5) auto_increment primary key,
+	name varchar(45) not null,
+	dob DATE,
+	emailid varchar(50) not null,
+	gender tinyint(1),
+	joined_date DATE,
+	release_date DATE,
+	notice_period int(10),
+	create_date DATE,
+	update_date DATE
+);	
+
 
 INSERT INTO db1.address (userid, street, city, state, country, pincode) VALUES (13, 'loha pool', 'kolkata', 'wb', 'india', '700019');
 

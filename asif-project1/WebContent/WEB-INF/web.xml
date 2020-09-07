@@ -28,6 +28,7 @@
 		<servlet-name>employeeServlet</servlet-name>
 		<url-pattern>/employeeController/list</url-pattern>
 	</servlet-mapping>
+<<<<<<< HEAD
 	
 	
 	<servlet>
@@ -39,6 +40,9 @@
 		<servlet-name>employeeOneServlet</servlet-name>
 		<url-pattern>/employeeOneController/list</url-pattern>
 	</servlet-mapping>
+=======
+
+>>>>>>> branch 'master' of https://github.com/asifaftab87/advance-java.git
 	<servlet>
 		<servlet-name>CreditCardServlet</servlet-name>
 		<servlet-class>org.ecom.controller.CreditCardController</servlet-class>
@@ -47,6 +51,16 @@
 	<servlet-mapping>
 		<servlet-name>CreditCardServlet</servlet-name>
 		<url-pattern>/CreditCard/list</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>EmployeeTwoServlet</servlet-name>
+		<servlet-class>org.ecom.controller.EmployeeTwoController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>EmployeeTwoServlet</servlet-name>
+		<url-pattern>/EmployeeTwo/list</url-pattern>
 	</servlet-mapping>
 
 
@@ -69,7 +83,7 @@
 		<servlet-name>employeeDeleteServlet</servlet-name>
 		<url-pattern>/employeeDeleteController/delete</url-pattern>
 	</servlet-mapping>
-	
+
 	<servlet>
 		<servlet-name>CreditCardDeleteServlet</servlet-name>
 		<servlet-class>org.ecom.controller.CreditCardDeleteController</servlet-class>
@@ -78,6 +92,16 @@
 	<servlet-mapping>
 		<servlet-name>CreditCardDeleteServlet</servlet-name>
 		<url-pattern>/CreditCard/Delete</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>EmployeeTwoDeleteServlet</servlet-name>
+		<servlet-class>org.ecom.controller.EmployeeTwoDeleteController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>EmployeeTwoDeleteServlet</servlet-name>
+		<url-pattern>/EmployeeTwo/Delete</url-pattern>
 	</servlet-mapping>
 
 
@@ -133,6 +157,16 @@
 		<servlet-name>CreditCardCreateServlet</servlet-name>
 		<url-pattern>/CreditCard/add</url-pattern>
 	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>EmployeeTwoCreateServlet</servlet-name>
+		<servlet-class>org.ecom.controller.EmployeeTwoCreateController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>EmployeeTwoCreateServlet</servlet-name>
+		<url-pattern>/EmployeeTwo/add</url-pattern>
+	</servlet-mapping>
 
 	<servlet>
 		<servlet-name>updateServlet</servlet-name>
@@ -163,6 +197,16 @@
 	<servlet-mapping>
 		<servlet-name>CreditCardUpdateServlet</servlet-name>
 		<url-pattern>/CreditCard/Update</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>EmployeeTwoUpdateServlet</servlet-name>
+		<servlet-class>org.ecom.controller.EmployeeTwoUpdateController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>EmployeeTwoUpdateServlet</servlet-name>
+		<url-pattern>/EmployeeTwo/Update</url-pattern>
 	</servlet-mapping>
 
 	<servlet>
@@ -205,7 +249,7 @@
 		<servlet-name>employeeDetailServlet</servlet-name>
 		<url-pattern>/employeeDetailController/detail</url-pattern>
 	</servlet-mapping>
-	
+
 	<servlet>
 		<servlet-name>CreditCardDetailServlet</servlet-name>
 		<servlet-class>org.ecom.controller.CreditCardDetailController</servlet-class>
@@ -214,6 +258,16 @@
 	<servlet-mapping>
 		<servlet-name>CreditCardDetailServlet</servlet-name>
 		<url-pattern>/CreditCard/Detail</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>EmployeeTwoDetailServlet</servlet-name>
+		<servlet-class>org.ecom.controller.EmployeeTwoDetailController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>EmployeeTwoDetailServlet</servlet-name>
+		<url-pattern>/EmployeeTwo/Detail</url-pattern>
 	</servlet-mapping>
 
 	<servlet>
@@ -246,7 +300,20 @@
 		<url-pattern>/user/search</url-pattern>
 	</servlet-mapping>
 
+<<<<<<< HEAD
 	
+=======
+	<servlet>
+		<servlet-name>employeeSearchServlet</servlet-name>
+		<servlet-class>org.ecom.controller.EmployeeSearchController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>employeeSearchServlet</servlet-name>
+		<url-pattern>/employeeSearchController/search</url-pattern>
+	</servlet-mapping>
+
+>>>>>>> branch 'master' of https://github.com/asifaftab87/advance-java.git
 	<servlet>
 		<servlet-name>CreditCardSearchServlet</servlet-name>
 		<servlet-class>org.ecom.controller.CreditCardSearchController</servlet-class>
@@ -257,6 +324,7 @@
 		<url-pattern>/CreditCard/Search</url-pattern>
 	</servlet-mapping>
 	
+<<<<<<< HEAD
 		<servlet>
 		<servlet-name>employeeSearchAgeServlet</servlet-name>
 		<servlet-class>org.ecom.controller.EmployeeSearchAgeController</servlet-class>
@@ -359,4 +427,189 @@
 	</servlet-mapping>
 	
 	
+=======
+	<servlet>
+		<servlet-name>EmployeeTwoSearchServlet</servlet-name>
+		<servlet-class>org.ecom.controller.EmployeeTwoNameController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>EmployeeTwoSearchServlet</servlet-name>
+		<url-pattern>/EmployeeTwo/Name</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>EmployeeTwoDobServlet</servlet-name>
+		<servlet-class>org.ecom.controller.EmployeeTwoDobController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>EmployeeTwoDobServlet</servlet-name>
+		<url-pattern>/EmployeeTwo/Dob</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>EmployeeTwoEmailServlet</servlet-name>
+		<servlet-class>org.ecom.controller.EmployeeTwoEmailController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>EmployeeTwoEmailServlet</servlet-name>
+		<url-pattern>/EmployeeTwo/Email</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>EmployeeTwoGenderServlet</servlet-name>
+		<servlet-class>org.ecom.controller.EmployeeTwoGenderController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>EmployeeTwoGenderServlet</servlet-name>
+		<url-pattern>/EmployeeTwo/Gender</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>EmployeeTwoJoinedDateServlet</servlet-name>
+		<servlet-class>org.ecom.controller.EmployeeTwoJoinedDateController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>EmployeeTwoJoinedDateServlet</servlet-name>
+		<url-pattern>/EmployeeTwo/JoinedDate</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>EmployeeTwoReleaseDateServlet</servlet-name>
+		<servlet-class>org.ecom.controller.EmployeeTwoReleaseDateController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>EmployeeTwoReleaseDateServlet</servlet-name>
+		<url-pattern>/EmployeeTwo/ReleaseDate</url-pattern>
+	</servlet-mapping>
+	
+		<servlet>
+		<servlet-name>EmployeeTwoNoticeperiodServlet</servlet-name>
+		<servlet-class>org.ecom.controller.EmployeeTwoNoticeperiodController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>EmployeeTwoNoticeperiodServlet</servlet-name>
+		<url-pattern>/EmployeeTwo/Noticeperiod</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>EmpFiveServlet</servlet-name>
+		<servlet-class>org.ecom.controller.EmployeefiveController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>EmpFiveServlet</servlet-name>
+		<url-pattern>/Employeefive/list</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>detailEmpFiveServlet</servlet-name>
+		<servlet-class>org.ecom.controller.EmployeefiveDetailController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>detailEmpFiveServlet</servlet-name>
+		<url-pattern>/Employeefive/detail</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+		<servlet-name>EmpFiveSearchServlet</servlet-name>
+		<servlet-class>org.ecom.controller.EmployeefiveSearchController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>EmpFiveSearchServlet</servlet-name>
+		<url-pattern>/Employeefive/search</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>EmpFiveUpdateServlet</servlet-name>
+		<servlet-class>org.ecom.controller.EmployeefiveUpdateController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>EmpFiveUpdateServlet</servlet-name>
+		<url-pattern>/Employeefive/update</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>EmpFiveCreateServlet</servlet-name>
+		<servlet-class>org.ecom.controller.EmployeefiveCreateController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>EmpFiveCreateServlet</servlet-name>
+		<url-pattern>/Employeefive/add</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>EmpFiveSearchAgeServlet</servlet-name>
+		<servlet-class>org.ecom.controller.EmployeefiveSearchByAgeController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>EmpFiveSearchAgeServlet</servlet-name>
+		<url-pattern>/Employeefive/searchAge</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>EmpFiveSearchJoinedServlet</servlet-name>
+		<servlet-class>org.ecom.controller.EmployeefiveSearchByJoinedController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>EmpFiveSearchJoinedServlet</servlet-name>
+		<url-pattern>/Employeefive/searchJoined</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+		<servlet-name>EmpFiveSearchReleaseServlet</servlet-name>
+		<servlet-class>org.ecom.controller.EmployeefiveSearchByReleaseController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>EmpFiveSearchReleaseServlet</servlet-name>
+		<url-pattern>/Employeefive/searchRelease</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>EmpFiveSearchEmailServlet</servlet-name>
+		<servlet-class>org.ecom.controller.EmployeefiveSearchByEmailIdController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>EmpFiveSearchEmailServlet</servlet-name>
+		<url-pattern>/Employeefive/searchEmail</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>EmpFiveSearchPeriodServlet</servlet-name>
+		<servlet-class>org.ecom.controller.EmployeefiveSearchByNotPeriodController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>EmpFiveSearchPeriodServlet</servlet-name>
+		<url-pattern>/Employeefive/searchPeriod</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>EmpFiveSearchGenderServlet</servlet-name>
+		<servlet-class>org.ecom.controller.EmployeefiveSearchByGenderController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>EmpFiveSearchGenderServlet</servlet-name>
+		<url-pattern>/Employeefive/searchGender</url-pattern>
+	</servlet-mapping>
+
+
+>>>>>>> branch 'master' of https://github.com/asifaftab87/advance-java.git
 </web-app>
