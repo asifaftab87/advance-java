@@ -27,9 +27,7 @@
 	<servlet-mapping>
 		<servlet-name>employeeServlet</servlet-name>
 		<url-pattern>/employeeController/list</url-pattern>
-	</servlet-mapping>
-<<<<<<< HEAD
-	
+	</servlet-mapping>	
 	
 	<servlet>
 		<servlet-name>employeeOneServlet</servlet-name>
@@ -40,9 +38,7 @@
 		<servlet-name>employeeOneServlet</servlet-name>
 		<url-pattern>/employeeOneController/list</url-pattern>
 	</servlet-mapping>
-=======
 
->>>>>>> branch 'master' of https://github.com/asifaftab87/advance-java.git
 	<servlet>
 		<servlet-name>CreditCardServlet</servlet-name>
 		<servlet-class>org.ecom.controller.CreditCardController</servlet-class>
@@ -300,9 +296,7 @@
 		<url-pattern>/user/search</url-pattern>
 	</servlet-mapping>
 
-<<<<<<< HEAD
-	
-=======
+
 	<servlet>
 		<servlet-name>employeeSearchServlet</servlet-name>
 		<servlet-class>org.ecom.controller.EmployeeSearchController</servlet-class>
@@ -313,7 +307,7 @@
 		<url-pattern>/employeeSearchController/search</url-pattern>
 	</servlet-mapping>
 
->>>>>>> branch 'master' of https://github.com/asifaftab87/advance-java.git
+
 	<servlet>
 		<servlet-name>CreditCardSearchServlet</servlet-name>
 		<servlet-class>org.ecom.controller.CreditCardSearchController</servlet-class>
@@ -324,7 +318,6 @@
 		<url-pattern>/CreditCard/Search</url-pattern>
 	</servlet-mapping>
 	
-<<<<<<< HEAD
 		<servlet>
 		<servlet-name>employeeSearchAgeServlet</servlet-name>
 		<servlet-class>org.ecom.controller.EmployeeSearchAgeController</servlet-class>
@@ -336,15 +329,6 @@
 	</servlet-mapping>
 	
 	
-	<servlet>
-		<servlet-name>employeeSearchServlet</servlet-name>
-		<servlet-class>org.ecom.controller.EmployeeSearchController</servlet-class>
-	</servlet>
-
-	<servlet-mapping>
-		<servlet-name>employeeSearchServlet</servlet-name>
-		<url-pattern>/employeeSearchController/search</url-pattern>
-	</servlet-mapping>
 	
 	
 	<servlet>
@@ -427,7 +411,6 @@
 	</servlet-mapping>
 	
 	
-=======
 	<servlet>
 		<servlet-name>EmployeeTwoSearchServlet</servlet-name>
 		<servlet-class>org.ecom.controller.EmployeeTwoNameController</servlet-class>
@@ -611,5 +594,4 @@
 	</servlet-mapping>
 
 
->>>>>>> branch 'master' of https://github.com/asifaftab87/advance-java.git
 </web-app>
