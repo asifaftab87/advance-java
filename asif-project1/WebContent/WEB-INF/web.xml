@@ -50,6 +50,16 @@
 	</servlet-mapping>
 	
 	<servlet>
+		<servlet-name>TableOneServlet</servlet-name>
+		<servlet-class>org.ecom.controller.TableOneController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>TableOneServlet</servlet-name>
+		<url-pattern>/TableOne/list</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
 		<servlet-name>EmployeeTwoServlet</servlet-name>
 		<servlet-class>org.ecom.controller.EmployeeTwoController</servlet-class>
 	</servlet>
