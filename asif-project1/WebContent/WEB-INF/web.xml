@@ -60,6 +60,16 @@
 	</servlet-mapping>
 	
 	<servlet>
+		<servlet-name>DropDownOneServlet</servlet-name>
+		<servlet-class>org.ecom.controller.DropDownOneController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>DropDownOneServlet</servlet-name>
+		<url-pattern>/DropDown/One</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
 		<servlet-name>EmployeeTwoServlet</servlet-name>
 		<servlet-class>org.ecom.controller.EmployeeTwoController</servlet-class>
 	</servlet>
