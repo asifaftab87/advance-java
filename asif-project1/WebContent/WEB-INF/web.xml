@@ -613,5 +613,25 @@
 		<url-pattern>/Employeefive/searchGender</url-pattern>
 	</servlet-mapping>
 
+<servlet>
+		<servlet-name>CountryDropDownServlet</servlet-name>
+		<servlet-class>org.ecom.controller.CountryDropDownController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>CountryDropDownServlet</servlet-name>
+		<url-pattern>/CountryDropDown/list</url-pattern>
+	</servlet-mapping>
+	
+	
+<servlet>
+		<servlet-name>StudentsTableServlet</servlet-name>
+		<servlet-class>org.ecom.controller.StudentsTableController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>StudentsTableServlet</servlet-name>
+		<url-pattern>/StudentsTable/list</url-pattern>
+	</servlet-mapping>
 
 </web-app>
