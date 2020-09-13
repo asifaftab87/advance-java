@@ -123,6 +123,7 @@
 		<url-pattern>/employeeCreateController/add</url-pattern>
 	</servlet-mapping>
 	
+		
 	<servlet>
 		<servlet-name>employeeOneCreateServlet</servlet-name>
 		<servlet-class>org.ecom.controller.EmployeeOneCreateController</servlet-class>
@@ -593,5 +594,26 @@
 		<url-pattern>/Employeefive/searchGender</url-pattern>
 	</servlet-mapping>
 
+
+
+<servlet>
+		<servlet-name>TableServlet</servlet-name>
+		<servlet-class>org.ecom.controller.TableController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>TableServlet</servlet-name>
+		<url-pattern>/Table/list</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>DropDownServlet</servlet-name>
+		<servlet-class>org.ecom.controller.DropDownController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>DropDownServlet</servlet-name>
+		<url-pattern>/DropDown/list</url-pattern>
+	</servlet-mapping>
 
 </web-app>
