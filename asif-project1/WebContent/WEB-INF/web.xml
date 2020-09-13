@@ -50,6 +50,26 @@
 	</servlet-mapping>
 	
 	<servlet>
+		<servlet-name>TableOneServlet</servlet-name>
+		<servlet-class>org.ecom.controller.TableOneController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>TableOneServlet</servlet-name>
+		<url-pattern>/TableOne/list</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>DropDownOneServlet</servlet-name>
+		<servlet-class>org.ecom.controller.DropDownOneController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>DropDownOneServlet</servlet-name>
+		<url-pattern>/DropDown/One</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
 		<servlet-name>EmployeeTwoServlet</servlet-name>
 		<servlet-class>org.ecom.controller.EmployeeTwoController</servlet-class>
 	</servlet>
@@ -594,6 +614,26 @@
 		<url-pattern>/Employeefive/searchGender</url-pattern>
 	</servlet-mapping>
 
+<servlet>
+		<servlet-name>CountryDropDownServlet</servlet-name>
+		<servlet-class>org.ecom.controller.CountryDropDownController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>CountryDropDownServlet</servlet-name>
+		<url-pattern>/CountryDropDown/list</url-pattern>
+	</servlet-mapping>
+	
+	
+<servlet>
+		<servlet-name>StudentsTableServlet</servlet-name>
+		<servlet-class>org.ecom.controller.StudentsTableController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>StudentsTableServlet</servlet-name>
+		<url-pattern>/StudentsTable/list</url-pattern>
+	</servlet-mapping>
 
 
 <servlet>
